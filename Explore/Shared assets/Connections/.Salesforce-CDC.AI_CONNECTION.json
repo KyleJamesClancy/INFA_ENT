@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "90nLe1ZHR0Gc8iVnE0ENgJ",
+    "name" : "Salesforce-CDC",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "4zDLdw8jIw8jIw8-gt-28978-2023-11-09T15:15:35.891Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-17T17:40:20.025Z",
+  "objectRefs" : [ ]
+}
