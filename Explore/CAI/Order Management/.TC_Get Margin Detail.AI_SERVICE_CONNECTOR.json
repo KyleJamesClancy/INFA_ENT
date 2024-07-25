@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "0FHpIDkD4ekefFxbnnnwo5",
+    "name" : "TC_Get Margin Detail",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "uwn2H0Fdw8jIw8j-gt-7009354-2023-08-31T17:10:23.337Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This mock service calculates margin for a particular order. For a particular item, this service will provide details on company margin, sales margin and margin per unit.",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.421Z",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "9GQ2aVG7jFEiK1b9dFpzsN",
+    "name" : "AJB-CAI-Snowflake",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "wFIRi92qBbbeJOS-gt-1403807-2024-06-12T22:05:21.367Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.419Z",
+  "objectRefs" : [ ]
+}

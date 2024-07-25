@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "aRqQCHZG1EhfmiAyyaSQ8L",
+    "name" : "Salesforce-Platform-Events",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "msfRabbfTQbdxWq-gt-35470-2023-11-09T15:48:33.207Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.432Z",
+  "objectRefs" : [ ]
+}

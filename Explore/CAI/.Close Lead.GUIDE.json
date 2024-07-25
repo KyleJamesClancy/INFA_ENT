@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "a45jUoHg215jAj1v4kSBuf",
+    "name" : "Close Lead",
+    "type" : "GUIDE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lwDxomUhGdwOLIF-gt-4854424-2024-02-05T15:56:23.183Z::gt.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Should you close this lead?",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.430Z",
+  "objectRefs" : [ ]
+}

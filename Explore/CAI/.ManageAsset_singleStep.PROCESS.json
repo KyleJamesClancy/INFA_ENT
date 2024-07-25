@@ -1,0 +1,65 @@
+{
+  "objectInfo" : {
+    "id" : "8FKuYkBT4orhpWagDW7e2C",
+    "name" : "ManageAsset_singleStep",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jHpeFRqXpIW7WHK-gt-14586-2024-02-13T17:44:55.159Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Manage Asset single Step Process",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.423Z",
+  "objectRefs" : [ {
+    "id" : "7K8AFag8aoZlDk1mq2jjSf",
+    "name" : "SingleStep_Approver",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "UMi4tciSrZMSPfX-gt-12260-2024-02-13T17:05:12.752Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Single Step Approver HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Cloud Data Governance Workflow Bundle"
+  }, {
+    "id" : "0WDXTnCGmqEj1gRJTR158p",
+    "name" : "SingleStep_EditUser",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Y1XmgaabclvAhrs-gt-11488-2024-02-13T17:05:12.811Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Single Step EditUser HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Cloud Data Governance Workflow Bundle"
+  } ]
+}

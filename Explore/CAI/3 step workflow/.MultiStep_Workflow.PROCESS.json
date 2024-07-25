@@ -1,0 +1,105 @@
+{
+  "objectInfo" : {
+    "id" : "4eoJJO5IFWflHEVCJs0gY4",
+    "name" : "MultiStep_Workflow",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "i1NjtaaabbgdoGs-gt-124610-2024-05-29T01:17:52.136Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Manage Asset three Step Process",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.430Z",
+  "objectRefs" : [ {
+    "id" : "hU1xfnsrNWibu4Aa6U6RAg",
+    "name" : "3Step_EditUser",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "X4hKGXShOeCFk4A-gt-127628-2024-05-29T01:17:51.793Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Three Step EditUser HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI/3 step workflow"
+  }, {
+    "id" : "9Q2kHKgMSZVe4r3IixBR6D",
+    "name" : "3Step_FinalApprover",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "AUxEKSabbeJOSM8-gt-127618-2024-05-29T01:17:51.433Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Three Step Final Approve HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI/3 step workflow"
+  }, {
+    "id" : "0jaIfZqIUBdjsXiHUqjY8V",
+    "name" : "3Step_SecondApprover",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "7lNaaabdvhxiQLn-gt-124598-2024-05-29T01:17:51.939Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Three Step Second Approver HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI/3 step workflow"
+  }, {
+    "id" : "8HEO94ZuXfQhIuDsacRJGQ",
+    "name" : "3Step_FirstApprover",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "NCx1H5lRuImXyco-gt-124588-2024-05-29T01:17:51.636Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Three Step First Approver HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI/3 step workflow"
+  } ]
+}

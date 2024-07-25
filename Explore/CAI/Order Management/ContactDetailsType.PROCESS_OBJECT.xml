@@ -1,0 +1,45 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>XRZXDyvs7xvk0qZ-gt-567495-2024-07-16T17:47:13.804Z::po.xml</types1:EntryId>
+      <types1:Name>ContactDetailsType</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-07-16T17:47:14Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                        isByCopy="true"
+                        name="ContactDetailsType">
+            <description>This object was generated from [contactDetailsType complex type] located in the [PurchaseOrder.json.xsd] source XML schema.</description>
+            <detail>
+               <field label="contactEmail"
+                      name="contactEmail"
+                      nullable="true"
+                      type="string"/>
+               <field label="contactName"
+                      name="contactName"
+                      nullable="true"
+                      type="string"/>
+               <field label="contactPhone"
+                      name="contactPhone"
+                      nullable="true"
+                      type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>4n9NBVthXoclfUVVh6xaIp</types1:GUID>
+      <types1:DisplayName>ContactDetailsType</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.188Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "9JqAo6B1G9vhqO2DmxYICd",
+    "name" : "CAI",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Dedicated project for CAI related demo assets",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-07-25T15:43:27.420Z",
+  "objectRefs" : [ ]
+}

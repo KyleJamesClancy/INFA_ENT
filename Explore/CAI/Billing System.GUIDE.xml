@@ -1,0 +1,888 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>sxhFdw8jIw8jIw8-gt-4543631-2024-02-01T18:25:58.306Z::gt.xml</types1:EntryId>
+      <types1:Name>Billing_System</types1:Name>
+      <types1:MimeType>application/xml+screenflow</types1:MimeType>
+      <types1:Description>Success on your first call. This also demonstrates showing the guide only when the Lead's status is Open - Not Contacted.</types1:Description>
+      <types1:AppliesTo>SFDC:Account</types1:AppliesTo>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-02-01T18:25:58Z</types1:CreationDate>
+      <types1:ModifiedBy>kclancy_ENT_Donald_tspod_SO</types1:ModifiedBy>
+      <types1:ModificationDate>2024-02-01T18:48:07Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <avosScreenflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                         xmlns:list="urn:activevos:spi:list:functions"
+                         allowRestart="true"
+                         displayName="Billing System"
+                         doneOnEndStep="true"
+                         name="Billing_System"
+                         runAsUser="$current">
+            <description>Success on your first call. This also demonstrates showing the guide only when the Lead's status is Open - Not Contacted.</description>
+            <appliesTo>SFDC:Account</appliesTo>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <possibleOutcomes>
+               <outcome id="outcome_1300826019447">Closed - Not Converted</outcome>
+               <outcome id="outcome_1300826019448">Nurture</outcome>
+               <outcome id="outcome_1300826019449">Scheduled Meeting With Sales Rep</outcome>
+               <outcome id="outcome_1300826019450">Evaluation Sent</outcome>
+            </possibleOutcomes>
+            <runOn target="desktop"/>
+            <notes/>
+            <deployment/>
+            <sendFeedback>
+               <emailTo/>
+            </sendFeedback>
+            <flow>
+               <startScreen id="aesf-1294431951191">
+                  <title>Start</title>
+                  <body contentType="text/html">The Introduction Call Guide is intended to
+				assist an 'inside sales rep' quickly qualify (or disqualify) a
+				prospect while on the phone.
+				&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;table
+				style="width: 100%;"
+				border="1"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Object
+				ID:&lt;/b&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&lt;input name="Id"
+				required="required"
+				value="Id*"&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Object
+				Type:&lt;/b&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&lt;input name="object
+				type" required="required" value="object
+				type*"&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt; </body>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1294431951191_aesf-1314115403374"
+                             targetScreen="aesf-1314115403374">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </startScreen>
+               <screen id="aesf-1314115403374">
+                  <title>Does this account have packages in new billing system?</title>
+                  <body contentType="text/html">&lt;p&gt;Check billin system for packages&lt;/p&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403374_aesf-1314115403375"
+                             targetScreen="aesf-1314115403375">
+                        <text>Yes</text>
+                     </action>
+                     <action alt="null" id="aesf-1314115403374_ls3jrtcx" targetScreen="ls3jrtcx">
+                        <text>No</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403376">
+                  <title>Let me introduce the product</title>
+                  <body contentType="text/html">&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;&lt;div&gt;Let me take a
+				minute to introduce the
+				product.&lt;br&gt;&lt;br&gt;Our product
+				addresses these primary use cases:&lt;br&gt;&lt;ol&gt;&lt;li&gt;[Use
+				case description]&lt;/li&gt;&lt;li&gt;[Use case
+				description]&lt;/li&gt;&lt;li&gt;[Use case
+				description]&lt;/li&gt;&lt;/ol&gt;&lt;b&gt;To
+				Do&lt;/b&gt;&lt;br&gt;&lt;blockquote&gt;Be brief.&amp;nbsp; The
+				point is to
+				show high level value proposition, but then let the
+				customer talk about their potential need(s)
+				&lt;/blockquote&gt;&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403376_aesf-1314115403377"
+                             targetScreen="aesf-1314115403377">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403377">
+                  <title>Can you tell me a little bit about your company?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;Can you tell me a little
+				about your role and your
+				company?&lt;br&gt;&lt;br&gt;&lt;b&gt;Verify&lt;/b&gt;&lt;br&gt;&lt;blockquote&gt;Verify
+				the Title / Role identified for this person is
+				correct&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;input
+				name="Title" value="Title"&gt;&lt;br&gt;&lt;/blockquote&gt;
+				&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403377_aesf-1314115403379"
+                             targetScreen="aesf-1314115403379">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="false">
+                     <screenDataItem name="Title" readonly="false" required="false" type="string">
+                        <options>
+                           <option name="length">80</option>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                  </screenData>
+               </screen>
+               <screen id="aesf-1314115403379">
+                  <title>Are you currently using this type of product?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img style="float: right;" title="" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png" alt=""&gt;In your experience there, do you think a product like ours might be helpful&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;[in increasing productivity]&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;[in improving overall quality&lt;/em&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;[in reducing development time and cost] &lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403379_aesf-1314115403380"
+                             targetScreen="aesf-1314115403380">
+                        <text>Yes - A competitive product</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403379_aesf-1314115403393"
+                             targetScreen="aesf-1314115403393">
+                        <text>No product in use</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403380">
+                  <title>Are There Any Pain Points?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;What do you like best about
+				them?&lt;br&gt;&lt;br&gt;Is
+				there anything you would like to see them
+				improve upon?
+				&lt;br&gt;&lt;br&gt;&lt;b&gt;Objective&lt;br&gt;&lt;/b&gt;&lt;blockquote&gt;Get
+				the prospect to select from one
+				of
+				these&lt;/blockquote&gt;&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403380_aesf-1314115403381"
+                             targetScreen="aesf-1314115403381">
+                        <text>License or Maintenance Cost</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403380_aesf-1314115403388"
+                             targetScreen="aesf-1314115403388">
+                        <text>Poor Support</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403380_aesf-1314115403390"
+                             targetScreen="aesf-1314115403390">
+                        <text>Not Reliable or Scalable</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403380_aesf-1314115403392"
+                             targetScreen="aesf-1314115403392">
+                        <text>No Pain Points</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403381">
+                  <title>Describe High Level Licensing and Maintenance Costs</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;I think you'll find our
+				solution to be extremely cost
+				effective.
+				&lt;br&gt;&lt;br&gt;Our
+				product licenses are typically substantially lower than most of the
+				other popular vendors - which also usually means less on a
+				recurring
+				basis with maintenance and support.
+				&lt;br&gt;&lt;br&gt;We also
+				provide free maintenance and support for the first year. Support and
+				maintenance are only an
+				additional 10% each thereafter.
+				&lt;br&gt;&lt;br&gt;&lt;b&gt;Are you
+				interested?&lt;/b&gt;&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403381_aesf-1314115403382"
+                             targetScreen="aesf-1314115403382">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403382">
+                  <title>Would You like to talk to a Sales Rep?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;
+
+				I feel your pain, but I
+				think we might be able to help.
+				&lt;br&gt;&lt;br&gt;Can I schedule a
+				quick call with a Sales Rep to explore this avenue a little
+				further?&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403382_aesf-1314383903965"
+                             targetScreen="aesf-1314383903965">
+                        <text>Yes - Schedule a Call Now</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403382_aesf-1314115403385"
+                             targetScreen="aesf-1314115403385">
+                        <text>Yes - Schedule a Call Later</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403382_aesf-1314115403387"
+                             targetScreen="aesf-1314115403387">
+                        <text>No</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403388">
+                  <title>Describe High Level Support Features</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;
+				We truly pride ourselves on
+				the turnaround time and quality
+				of our support
+				services.&lt;br&gt;&lt;br&gt;With &lt;i&gt;[product-name]&lt;/i&gt;
+				the first year of support is free and only 10% thereafter.
+				&lt;br&gt;&lt;br&gt;We also
+				offer support forums which allows our
+				customer community to search, post and share ideas. The forum is
+				constantly monitored by people within our company ensuring a
+				quick
+				turnaround
+				We also have dedicated support personnel available to
+				assist you in any stage of your project from evaluation through
+				production.
+				&lt;br&gt;&lt;br&gt;For our customers in production we
+				also offer 24 x 7 support contacts if there's ever an
+				emergency.&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403388_aesf-1314115403389"
+                             targetScreen="aesf-1314115403389">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403390">
+                  <title>Describe High Level Failover Features</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;
+				&lt;i&gt;[product-name]&lt;/i&gt; has been in business for
+				&lt;i&gt;[x-years]&lt;/i&gt;
+				&lt;br&gt;&lt;br&gt;We have customers
+				ranging from small businesses to large financial institutions and
+				government agencies who rely on
+				their solutions built with
+				&lt;i&gt;[product-name]&lt;/i&gt; to be secure and reliable 24 x 7.
+				&lt;br&gt;&lt;br&gt;We've always built our solutions on industry
+				standards
+				which are proven and stable.
+				&lt;br&gt;&lt;br&gt;Our
+				software can also be configured to support high-availability,
+				clustering and failover.&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403390_aesf-1314115403391"
+                             targetScreen="aesf-1314115403391">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403393">
+                  <title>Has a need been established?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;What would you say are the
+				biggest one or two pain points
+				or obstacles that you would love to
+				see addressed?&lt;br&gt;&lt;br&gt;&lt;b&gt;To
+				Do&lt;br&gt;&lt;/b&gt;&lt;ol&gt;&lt;li&gt;Discuss pain points
+				briefly and take
+				notes&lt;/li&gt;&lt;li&gt;Ask the prospect if he
+				would like to learn more about our
+				product.&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403393_aesf-1314115403394"
+                             targetScreen="aesf-1314115403394">
+                        <text>Yes - Need is established</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403393_aesf-1314115403402"
+                             targetScreen="aesf-1314115403402">
+                        <text>No need</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403393_aesf-1314115403411"
+                             targetScreen="aesf-1314115403411">
+                        <text>Personal interest</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403394">
+                  <title>What are the next steps?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;
+				Sounds like you have a
+				great use-case.
+				&lt;br&gt;&lt;br&gt;We can do a few things to move
+				forward...&lt;br&gt;&lt;ul&gt;&lt;li&gt;I can send you a link for a
+				30-day evaluation
+				&lt;/li&gt;&lt;li&gt;I can also
+				have a product
+				specialist give you a call to set-up a demo or dive down a little
+				further with addressing your specific requirements
+				&lt;/li&gt;&lt;/ul&gt;Can I have
+				someone give you a call?&lt;/div&gt; </body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403394_aesf-1314386114367"
+                             targetScreen="aesf-1314386114367">
+                        <text>Schedule a Call Now</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403394_aesf-1314115403397"
+                             targetScreen="aesf-1314115403397">
+                        <text>Schedule a Call Later</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403394_aesf-1314115403400"
+                             targetScreen="aesf-1314115403400">
+                        <text>Send Eval</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403402">
+                  <title>Can I contact you in 3 months?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float:
+				right;"&gt;&lt;b&gt;Ask&lt;/b&gt;&lt;br&gt;&lt;blockquote&gt;Can I
+				contact you again in &lt;i&gt;[3
+				months]&lt;/i&gt;?&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote&gt;Is
+				there anyone else within your organization who might benefit from
+				our type of
+				solution?&lt;br&gt;&lt;/blockquote&gt;&lt;b&gt;Objective&lt;br&gt;&lt;/b&gt;&lt;blockquote&gt;Although
+				there is no current need, the timing might be better
+				in a few
+				months&lt;br&gt;&lt;/blockquote&gt;&lt;ul&gt;&lt;li&gt;The prospects
+				need(s) / priorities may change&lt;/li&gt;&lt;li&gt;New product
+				features might be a better
+				fit for this
+				prospect&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403402_aesf-1314115403403"
+                             targetScreen="aesf-1314115403403">
+                        <text>Yes - Create a reminder</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403402_aesf-1314115403406"
+                             targetScreen="aesf-1314115403406">
+                        <text>No</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403402_aesf-1314115403408"
+                             targetScreen="aesf-1314115403408">
+                        <text>Someone else</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403408">
+                  <title>Who else can I contact?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;
+
+				&lt;b&gt;To
+				Do&lt;/b&gt;&lt;br&gt;&lt;blockquote&gt;Take
+				the name, role,
+				telephone and email of alternate person to contact
+				Create a new Lead
+				Record in
+				Salesforce&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;/div&gt; </body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403408_aesf-1314115403410"
+                             targetScreen="aesf-1314115403410">
+                        <text>I have new contact info</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403411">
+                  <title>Can I add you to our mailing list?</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;Could I add you to our
+				mailing list for informative
+				webinars and future product
+				releases?&lt;/div&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403411_aesf-1314115403412"
+                             targetScreen="aesf-1314115403412">
+                        <text>Yes - Add to mailing list</text>
+                     </action>
+                     <action alt="null"
+                             id="aesf-1314115403411_aesf-1314386114370"
+                             targetScreen="aesf-1314386114370">
+                        <text>No</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="aesf-1314115403412">
+                  <title>Enter or Verify Lead Information</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;
+				Thanks. I just need to
+				verify your contact information:
+				&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;table style="width: 100%;"
+				border="1" frame="VOID"
+				rules="NONE"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td
+				valign="top"&gt;&lt;b&gt;First
+				Name:&lt;span class="Apple-tab-span"
+				style="white-space:pre"&gt;
+				&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;/td&gt;&lt;td
+				valign="top"&gt;&lt;input name="FirstName" value="First
+				Name"&gt;&amp;nbsp;&lt;font class="Apple-style-span" face="Arial"
+				size="2"&gt;&lt;span class="Apple-style-span" style="line-height:
+				normal;"&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last
+				Name:&lt;span class="Apple-tab-span" style="white-space:pre"&gt;
+				&lt;/span&gt;&lt;/b&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;input
+				name="LastName" value="Last
+				Name"&gt;&amp;nbsp;&lt;font
+				class="Apple-style-span" face="Arial" size="2"&gt;&lt;span
+				class="Apple-style-span"
+				style="line-height: normal;
+				"&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Email:&lt;/b&gt;
+				&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;font class="Apple-style-span"
+				face="Arial" size="2"&gt;&lt;span class="Apple-style-span"
+				style="line-height: normal; "&gt;&lt;input name="Email"
+				value="Email"&gt;&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Phone:&lt;/b&gt;
+				&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;font class="Apple-style-span"
+				face="Arial" size="2"&gt;&lt;span class="Apple-style-span"
+				style="line-height: normal; "&gt;&lt;input name="Phone"
+				value="Phone"&gt;&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br&gt;&lt;/div&gt; </body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403412_aesf-1314115403414"
+                             targetScreen="aesf-1314115403414">
+                        <text>Verified</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="false">
+                     <screenDataItem name="FirstName"
+                                     readonly="false"
+                                     required="false"
+                                     type="string">
+                        <options>
+                           <option name="length">40</option>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                     <screenDataItem name="LastName" readonly="false" required="false" type="string">
+                        <options>
+                           <option name="length">80</option>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                     <screenDataItem name="Email" readonly="false" required="false" type="email">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                     <screenDataItem name="Phone" readonly="false" required="false" type="phone">
+                        <options>
+                           <option name="length">40</option>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                  </screenData>
+               </screen>
+               <service id="aesf-1314115403400">
+                  <title>Send Evaluation Email</title>
+                  <serviceName>SFDC:sfSendFreeFormEmailService</serviceName>
+                  <serviceGUID>cxLsrhwmIgghGeMgYxxtO1</serviceGUID>
+                  <serviceInput>
+                     <parameter id="ls2aqb73"
+                                name="Subject"
+                                source="constant"
+                                updatable="false">Evaluation Email</parameter>
+                     <parameter id="ls2aqb74" name="Body" source="constant" updatable="false">&lt;p&gt;Evaluation Email regarding {$Id}&lt;/p&gt;</parameter>
+                  </serviceInput>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403400_aesf-1314115403401"
+                             targetScreen="aesf-1314115403401">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </service>
+               <service id="aesf-1314115403414">
+                  <title>Send Nurture Confirmation Mail</title>
+                  <serviceName>SFDC:sfSendFreeFormEmailService</serviceName>
+                  <serviceGUID>cxLsrhwmIgghGeMgYxxtO1</serviceGUID>
+                  <serviceInput>
+                     <parameter id="ls2aqb73"
+                                name="Subject"
+                                source="constant"
+                                updatable="false">Introduction call Confirmation</parameter>
+                     <parameter id="ls2aqb74" name="Body" source="constant" updatable="false">&lt;p&gt;Confirmation call regarding {$Id}&lt;br&gt;&lt;br&gt;Interested in: {$ProductInterest__c}&lt;/p&gt;</parameter>
+                  </serviceInput>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403414_aesf-1314386114372"
+                             targetScreen="aesf-1314386114372">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </service>
+               <endScreen id="aesf-1314115403384" outcomeId="outcome_1300826019449">
+                  <title>Thank you</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;
+				Thank you. I look forward
+				to taking to you
+				soon.&lt;/div&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="aesf-1314115403386" outcomeId="outcome_1300826019449">
+                  <title>Thank you</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;
+				Thank you. I look forward
+				to taking to you
+				soon.&lt;/div&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="aesf-1314115403399" outcomeId="outcome_1300826019449">
+                  <title>Done</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;Thank you for your time
+				today.
+				&lt;br&gt;&lt;br&gt;I look
+				forward to talking with you again
+				soon.
+				&lt;br&gt;&lt;br&gt;If you have any questions before then,
+				please don't hesitate to give me a call or email.&lt;/div&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="aesf-1314115403401" outcomeId="outcome_1300826019450">
+                  <title>Evaluation Email Sent</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png"
+				title="" alt="" style="float: right;"&gt;You should see an email
+				with instructions for downloading
+				and installing the evaluation
+				software.
+				&lt;/div&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="aesf-1314386114364" outcomeId="outcome_1300826019448">
+                  <title>Lead Status Changed to Working - Contacted</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/closed.png"
+				title="" alt="" style="float: right;"&gt;Thank you for your time
+				today&lt;/div&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="aesf-1314115403407" outcomeId="outcome_1300826019447">
+                  <title>Lead Status Changed to Closed - Not Converted</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/closed.png"
+				title="" alt="" style="float: right;"&gt;Thank you for your time
+				today&lt;/div&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="aesf-1314386114373" outcomeId="outcome_1300826019448">
+                  <title>Lead Status Changed to Working - Contacted</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/closed.png"
+				title="" alt="" style="float: right;"&gt;Thank you for your time
+				today&lt;/div&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="aesf-1314386114371" outcomeId="outcome_1300826019447">
+                  <title>Lead Status Changed to Closed - Not Converted</title>
+                  <body contentType="text/html">&lt;div&gt;&lt;img
+				src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/closed.png"
+				title="" alt="" style="float: right;"&gt;Thank you for your time
+				today&lt;/div&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <empty gatewayType="exclusive" id="ls3jrtct">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="ls3jrtcp">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="ls3jrtb9">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="ls3jrtay">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="ls3jrtcn">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="ls3jrtbq">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="ls3jrtc5">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="ls3jrtcl">
+                  <actions/>
+               </empty>
+               <jumpTo id="aesf-1314115403375"
+                       targetTitle="Are you currently using this type of product?">
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403375_aesf-1314115403379"
+                             targetScreen="aesf-1314115403379">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </jumpTo>
+               <jumpTo id="aesf-1314115403387"
+                       targetTitle="Update Status to Closed - Not Converted">
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403387_aesf-1314115403406"
+                             targetScreen="aesf-1314115403406">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </jumpTo>
+               <jumpTo id="aesf-1314115403389"
+                       targetTitle="Would You like to talk to a Sales Rep?">
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403389_aesf-1314115403382"
+                             targetScreen="aesf-1314115403382">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </jumpTo>
+               <jumpTo id="aesf-1314115403391"
+                       targetTitle="Would You like to talk to a Sales Rep?">
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403391_aesf-1314115403382"
+                             targetScreen="aesf-1314115403382">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </jumpTo>
+               <jumpTo id="aesf-1314115403392"
+                       targetTitle="Update Status to Closed - Not Converted">
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403392_aesf-1314115403406"
+                             targetScreen="aesf-1314115403406">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </jumpTo>
+               <jumpTo id="aesf-1314386114367" targetTitle="Schedule a call with Sales rep">
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314386114367_aesf-1314383903965"
+                             targetScreen="aesf-1314383903965">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </jumpTo>
+               <jumpTo id="aesf-1314115403410"
+                       targetTitle="Update Status to Closed - Not Converted">
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403410_aesf-1314115403406"
+                             targetScreen="aesf-1314115403406">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </jumpTo>
+               <callProcess id="ls3jrtcx">
+                  <title>Call Package in snowflake</title>
+                  <subflowGUID/>
+                  <subflowPath/>
+                  <runAsUser>$current</runAsUser>
+                  <actions>
+                     <action alt=""
+                             id="ls3jrtcx_aesf-1314115403376"
+                             targetScreen="aesf-1314115403376">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </callProcess>
+               <create id="aesf-1314383903965">
+                  <title>Schedule a call with Sales rep</title>
+                  <entityName>SFDC:Event</entityName>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314383903965_aesf-1314115403384"
+                             targetScreen="aesf-1314115403384">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+               <create id="aesf-1314115403385">
+                  <title>Reminder Task to schedule a call</title>
+                  <entityName>SFDC:Task</entityName>
+                  <createInput>
+                     <parameter id="ls3jrtat" name="WhoId" source="field" updatable="false">Id</parameter>
+                  </createInput>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403385_aesf-1314115403386"
+                             targetScreen="aesf-1314115403386">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+               <create id="aesf-1314115403397">
+                  <title>Create a task to schedule a call</title>
+                  <entityName>SFDC:Task</entityName>
+                  <createInput>
+                     <parameter id="ls3jrtbi" name="WhoId" source="field" updatable="false">Id</parameter>
+                  </createInput>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403397_aesf-1314386114365"
+                             targetScreen="aesf-1314386114365">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+               <create id="aesf-1314386114365">
+                  <title>Allow user to add chatter</title>
+                  <entityName>SFDC:FeedItem</entityName>
+                  <createInput>
+                     <parameter id="ls3jrtbj" name="ParentId" source="field" updatable="false">Id</parameter>
+                  </createInput>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314386114365_aesf-1314115403399"
+                             targetScreen="aesf-1314115403399">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+               <create id="aesf-1314115403403">
+                  <title>Reminder Task to call them back</title>
+                  <entityName>SFDC:Task</entityName>
+                  <createInput>
+                     <parameter id="ls3jrtbv" name="WhoId" source="field" updatable="false">Id</parameter>
+                  </createInput>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403403_aesf-1314386114363"
+                             targetScreen="aesf-1314386114363">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+               <assignment id="aesf-1314386114363">
+                  <title>Update Status to Working - Contacted</title>
+                  <operation source="constant" to="Status">Working - Contacted</operation>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314386114363_aesf-1314386114364"
+                             targetScreen="aesf-1314386114364">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </assignment>
+               <assignment id="aesf-1314115403406">
+                  <title>Update Status to Closed - Not Converted</title>
+                  <operation source="constant" to="Status">Closed - Not Converted</operation>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314115403406_aesf-1314115403407"
+                             targetScreen="aesf-1314115403407">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </assignment>
+               <assignment id="aesf-1314386114372">
+                  <title>Update Status to Working - Contacted</title>
+                  <operation source="constant" to="Status">Working - Contacted</operation>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314386114372_aesf-1314386114373"
+                             targetScreen="aesf-1314386114373">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </assignment>
+               <assignment id="aesf-1314386114370">
+                  <title>Update Status to Closed - Not Converted</title>
+                  <operation source="constant" to="Status">Closed - Not Converted</operation>
+                  <actions>
+                     <action alt="null"
+                             id="aesf-1314386114370_aesf-1314386114371"
+                             targetScreen="aesf-1314386114371">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </assignment>
+            </flow>
+         </avosScreenflow>
+      </types1:Entry>
+      <types1:GUID>9Y5F1Io9bSwiQ7BzgDPYwQ</types1:GUID>
+      <types1:DisplayName>Billing System</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:25.431Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

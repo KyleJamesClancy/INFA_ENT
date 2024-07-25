@@ -1,0 +1,42 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>iaa-gt-1403817-2024-06-12T22:05:21.41Z::po.xml</types1:EntryId>
+      <types1:Name>AddressPO</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>Workday,Recruiting,HEDA</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-06-12T22:05:21Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="AddressPO"
+                        isByCopy="true"
+                        name="AddressPO">
+            <description/>
+            <tags>Workday,Recruiting,HEDA</tags>
+            <detail>
+               <field label="Street_Address" name="Street_Address" type="string"/>
+               <field label="Postal_Code" name="Postal_Code" type="string"/>
+               <field label="State" name="State" type="string"/>
+               <field label="City" name="City" type="string"/>
+               <field label="Country" name="Country" type="string"/>
+               <field label="Address_Type" name="Address_Type" type="picklist">
+                  <options>
+                     <option name="values">[{"value":"Mailing","label":"Mailing"},{"value":"Home","label":"Home"}]</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>21kD2blIHVFezm8nqXwxgz</types1:GUID>
+      <types1:DisplayName>AddressPO</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.195Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

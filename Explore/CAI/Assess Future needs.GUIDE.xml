@@ -1,0 +1,181 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>WeIssjqluQgabcj-gt-3771370-2024-01-25T19:15:41.78Z::gt.xml</types1:EntryId>
+      <types1:Name>Assess_Future_needs</types1:Name>
+      <types1:MimeType>application/xml+screenflow</types1:MimeType>
+      <types1:Description>Assess Future Needs for our product within the organization. Data collected here will help in estimating the renewal pipeline.</types1:Description>
+      <types1:AppliesTo>Salesforce:Account</types1:AppliesTo>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-01-25T19:15:42Z</types1:CreationDate>
+      <types1:ModifiedBy>kclancy_ENT_Donald_tspod_SO</types1:ModifiedBy>
+      <types1:ModificationDate>2024-02-05T22:00:19Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>kclancy_ENT_Donald_tspod_SO</types1:PublishedBy>
+      <types1:PublicationDate>2024-02-05T22:00:26Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/sf.Assess_Future_needs/Assess_Future_needs.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <avosScreenflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                         xmlns:list="urn:activevos:spi:list:functions"
+                         allowRestart="true"
+                         displayName="Assess Future needs"
+                         doneOnEndStep="false"
+                         name="Assess_Future_needs"
+                         runAsUser="$current">
+            <description>Assess Future Needs for our product within the organization. Data collected here will help in estimating the renewal pipeline.</description>
+            <appliesTo>Salesforce:Account</appliesTo>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <possibleOutcomes>
+               <outcome id="outcome_jiu1buzh">Potential for Additional Sales</outcome>
+               <outcome id="outcome_jiu1bv6d">Satisfied with Existing Products</outcome>
+               <outcome id="outcome_jiu1bv6e">Unsatisfied With Product</outcome>
+            </possibleOutcomes>
+            <runOn target="desktop"/>
+            <notes/>
+            <deployment/>
+            <sendFeedback>
+               <emailTo/>
+            </sendFeedback>
+            <flow>
+               <startScreen id="jd300kk3">
+                  <title>Start</title>
+                  <body contentType="text/html"/>
+                  <actions>
+                     <action alt="null" id="jd300kk3_jiu1buud" targetScreen="jiu1buud">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="true"/>
+               </startScreen>
+               <screen id="jiu1buud">
+                  <title>Do you foresee any additional uses of our product?</title>
+                  <body contentType="text/html">&lt;p&gt;When your current project is complete, do you think our product could be used to address any other needs within your organization&lt;img style="width: 100px; height: 83px; float: right;" title="discussion.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png" alt="discussion.png"&gt;&lt;br&gt;&lt;strong&gt;&lt;br&gt;Objective&lt;/strong&gt;&amp;nbsp;&lt;/p&gt;
+&lt;blockquote&gt;Get a read on the potential for additional sales within this account:&amp;nbsp;&lt;/blockquote&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="jiu1buud_jiu1buuu" targetScreen="jiu1buuu">
+                        <text>Yes</text>
+                     </action>
+                     <action alt="null" id="jiu1buud_jiu1buzl" targetScreen="jiu1buzl">
+                        <text>No</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="jiu1buuu">
+                  <title>Potential Exists For Additional Sales</title>
+                  <body contentType="text/html">&lt;ul&gt;
+&lt;li&gt;Do you have another project in mind or planned&lt;img style="width: 100px; height: 83px; float: right;" title="discussion.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png" alt="discussion.png"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Is there an implementation date in mind?&lt;/li&gt;
+&lt;li&gt;Is it related to the existing project or does it address a different need?&lt;/li&gt;
+&lt;li&gt;Is this within your team / department or elsewhere within your company?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Can I have the name of the project sponsor?&lt;/li&gt;
+&lt;/ul&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="jiu1buuu_jiu1buv6" targetScreen="jiu1buv6">
+                        <text>I Have Taken Notes</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="jiu1buzl">
+                  <title>Is the customer satisfied so far?</title>
+                  <body contentType="text/html">&lt;p&gt;Are you happy with the current solution using&amp;nbsp;&lt;em&gt;[product-name]&lt;/em&gt;?&lt;img style="width: 100px; height: 83px; float: right;" title="discussion.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/discussion.png" alt="discussion.png"&gt;&lt;br&gt;&lt;br&gt;Is there anything we can improve upon?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;product features&lt;/li&gt;
+&lt;li&gt;support&lt;/li&gt;
+&lt;li&gt;education&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Objective&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;Briefly ascertain why the customer does not foresee using our product in the future&amp;nbsp;&lt;/blockquote&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="jiu1buzl_jiu1bv04" targetScreen="jiu1bv04">
+                        <text>Happy Customer</text>
+                     </action>
+                     <action alt="null" id="jiu1buzl_jiu1bv35" targetScreen="jiu1bv35">
+                        <text>Unhappy Customer</text>
+                     </action>
+                  </actions>
+               </screen>
+               <endScreen id="jiu1buz9" outcomeId="outcome_jiu1buzh">
+                  <title>Potential for Additional Sales</title>
+                  <body contentType="text/html">&lt;p&gt;Sounds like there's hope for future sales&lt;img style="width: 100px; height: 83px; float: right;" title="future_op.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/future_op.png" alt="future_op.png"&gt;&lt;/p&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="jiu1bv60" outcomeId="outcome_jiu1bv6d">
+                  <title>Satisfied - no known additional need</title>
+                  <body contentType="text/html">&lt;p&gt;Satisfied customer with no additional needs identified at this point&lt;img style="width: 100px; height: 83px; float: right;" title="satisfied.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/satisfied.png" alt="satisfied.png"&gt;&lt;/p&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="jiu1bv6b" outcomeId="outcome_jiu1bv6e">
+                  <title>Unsatisfied customer</title>
+                  <body contentType="text/html">&lt;p&gt;Customer is not happy with the product or implementation&lt;img style="width: 100px; height: 83px; float: right;" title="unsatisfied.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/unsatisfied.png" alt="unsatisfied.png"&gt;&lt;/p&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <empty gatewayType="exclusive" id="ls9e0x96">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="ls9e0x94">
+                  <actions/>
+               </empty>
+               <create id="jiu1buv6">
+                  <title>Log a potential sale</title>
+                  <entityName>Salesforce:Task</entityName>
+                  <actions>
+                     <action alt="null" id="jiu1buv6_jiu1buz9" targetScreen="jiu1buz9">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+               <create id="jiu1bv04">
+                  <title>Log a call Happy Customer</title>
+                  <entityName>Salesforce:Task</entityName>
+                  <createInput>
+                     <parameter id="ls94k6gc" name="WhatId" source="field" updatable="false">Id</parameter>
+                  </createInput>
+                  <actions>
+                     <action alt="null" id="jiu1bv04_jiu1bv60" targetScreen="jiu1bv60">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+               <create id="jiu1bv35">
+                  <title>Log a call unhappy customer</title>
+                  <entityName>Salesforce:Task</entityName>
+                  <createInput>
+                     <parameter id="ls94k6gg" name="WhatId" source="field" updatable="false">Id</parameter>
+                  </createInput>
+                  <actions>
+                     <action alt="null" id="jiu1bv35_jiu1bv6b" targetScreen="jiu1bv6b">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+            </flow>
+         </avosScreenflow>
+      </types1:Entry>
+      <types1:GUID>5wHCkgZqhXSkkuQfsA9Hm1</types1:GUID>
+      <types1:DisplayName>Assess Future needs</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:25.892Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "7A61bOwhn4pely2lXYhikU",
+    "name" : "Data API",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Customer Endpoint for full set of HTTP verbs against data set",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-07-25T15:43:27.428Z",
+  "objectRefs" : [ ]
+}

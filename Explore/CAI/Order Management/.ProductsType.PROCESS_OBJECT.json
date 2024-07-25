@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "5cBASJA7JT0dsrQK8ggwKB",
+    "name" : "ProductsType",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "1YxQ2Tp5OjG4abc-gt-567503-2024-07-16T17:47:13.847Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [productsType complex type] located in the [PurchaseOrder.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.425Z",
+  "objectRefs" : [ ]
+}

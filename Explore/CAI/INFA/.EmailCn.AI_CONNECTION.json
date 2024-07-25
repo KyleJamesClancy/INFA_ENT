@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "7xtsDW53ECriMR0lKYbdsH",
+    "name" : "EmailCn",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lBBeMHck5qbbfUr-gt-560910-2024-07-16T17:05:31.185Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Foc27263",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.434Z",
+  "objectRefs" : [ ]
+}

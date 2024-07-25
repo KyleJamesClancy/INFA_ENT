@@ -1,0 +1,87 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>GqpfZJdqVIKchzt-gt-146635-2024-06-21T13:26:19.522Z::conn.xml</types1:EntryId>
+      <types1:Name>FlatFile</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:idmc07-ent-donald-primary.infacloud.eu</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-06-21T13:26:20Z</types1:CreationDate>
+      <types1:ModifiedBy>kclancy_ENT_Donald_tspod_SO</types1:ModifiedBy>
+      <types1:ModificationDate>2024-06-21T13:28:24Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>kclancy_ENT_Donald_tspod_SO</types1:PublishedBy>
+      <types1:PublicationDate>2024-06-21T13:27:19Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/FlatFile/FlatFile.conn.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="FlatFile"
+                     label="FlatFile"
+                     name="FlatFile">
+            <description/>
+            <tags>.agent:idmc07-ent-donald-primary.infacloud.eu</tags>
+            <agent>idmc07-ent-donald-primary.infacloud.eu</agent>
+            <consumers>
+               <consumer enabled="true" name="FileMonitor" typeName="FileMonitor">
+                  <description>Use this event source to monitor folders for new files.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="directoryName" value="/data/demo"/>
+                     <attribute encrypted="false" name="recursive" value="false"/>
+                     <attribute encrypted="false" name="include" value="*Person"/>
+                     <attribute encrypted="false" name="exclude" value=""/>
+                     <attribute encrypted="false" name="noop" value="false"/>
+                     <attribute encrypted="false" name="delete" value="false"/>
+                     <attribute encrypted="false" name="preMove" value=""/>
+                     <attribute encrypted="false" name="move" value=""/>
+                     <attribute encrypted="false" name="moveFailed" value=""/>
+                     <attribute encrypted="false" name="initialDelay" value="1"/>
+                     <attribute encrypted="false" name="delay" value="1"/>
+                     <attribute encrypted="false" name="maxMessagesPerPoll" value=""/>
+                     <attribute encrypted="false" name="readLock" value="rename"/>
+                     <attribute encrypted="false" name="readLockTimeout" value=""/>
+                     <attribute encrypted="false" name="readLockCheckInterval" value=""/>
+                     <attribute encrypted="false" name="readLockMinLength" value=""/>
+                     <attribute encrypted="false" name="readLockLoggingLevel" value="WARN"/>
+                     <attribute encrypted="false" name="otherAttributes" value=""/>
+                  </attributes>
+               </consumer>
+            </consumers>
+            <producers>
+               <producer enabled="true" name="FileWriter" typeName="FileWriter">
+                  <description>Use this event target to write output to a file.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="directoryName" value="/data"/>
+                     <attribute encrypted="false" name="fileExist" value="Override"/>
+                     <attribute encrypted="false" name="moveExisting" value=""/>
+                     <attribute encrypted="false" name="eagerDeleteTargetFile" value="true"/>
+                     <attribute encrypted="false" name="tempPrefix" value=""/>
+                     <attribute encrypted="false" name="tempFileName" value=""/>
+                     <attribute encrypted="false" name="forceWrites" value="true"/>
+                     <attribute encrypted="false" name="bufferSize" value=""/>
+                     <attribute encrypted="false" name="charset" value=""/>
+                  </attributes>
+               </producer>
+            </producers>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           supportsPublishSkipMetadataRefresh="false"
+                           type="File"
+                           uuid="ac000300-d9fe-11e4-8830-0800200c9a66">
+               <description>Provides connections to file monitoring brokers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>8F3ubXi7f8Kb8msxkixaKC</types1:GUID>
+      <types1:DisplayName>FlatFile</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:25.917Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

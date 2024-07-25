@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "2z2u3fsXYcmg5x42MbKu00",
+    "name" : "Snow-appconnection",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lnVqSLlBWlD2pHA-gt-470276-2023-10-12T19:47:52.179Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.421Z",
+  "objectRefs" : [ ]
+}

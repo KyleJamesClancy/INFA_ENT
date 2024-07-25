@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "3I19oxhYnNWeF7TquGFC88",
+    "name" : "3 step workflow",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-07-25T15:43:27.429Z",
+  "objectRefs" : [ ]
+}

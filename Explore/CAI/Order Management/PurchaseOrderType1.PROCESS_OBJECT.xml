@@ -1,0 +1,69 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>xp53nQciSrZMSPf-gt-567521-2024-07-16T17:47:14.377Z::po.xml</types1:EntryId>
+      <types1:Name>PurchaseOrderType1</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-07-16T17:47:14Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        isByCopy="true"
+                        name="PurchaseOrderType1">
+            <description xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd">This object was generated from [purchaseOrderType complex type] located in the [PurchaseOrder.json.xsd] source XML schema.</description>
+            <detail>
+               <field label="companyDetails"
+                      name="companyDetails"
+                      nullable="true"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:CompanyDetailsType</option>
+                     <option name="guid">6YFdvwCVy4fkPnYQhmFFsb</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="orderID"
+                      name="orderID"
+                      nullable="true"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="orderDate"
+                      name="orderDate"
+                      nullable="true"
+                      type="date"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="orderTotal"
+                      name="orderTotal"
+                      nullable="true"
+                      type="double"/>
+               <field label="products"
+                      name="products"
+                      nullable="true"
+                      type="objectlist">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:ProductsType</option>
+                     <option name="guid">5cBASJA7JT0dsrQK8ggwKB</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>2826lXq6gMrcreugDzQ5ET</types1:GUID>
+      <types1:DisplayName>PurchaseOrderType1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.804Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

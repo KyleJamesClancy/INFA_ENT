@@ -1,0 +1,476 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>xIS7T1cnFKi9zhF-gt-1403172-2024-06-12T22:05:22.381Z::pd.xml</types1:EntryId>
+      <types1:Name>Manage_Customer_Snowflake</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-06-12T22:05:22Z</types1:CreationDate>
+      <types1:ModifiedBy>kclancy_ENT_Donald_tspod_SO</types1:ModifiedBy>
+      <types1:ModificationDate>2024-06-25T17:07:52Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>kclancy_ENT_Donald_tspod_SO</types1:PublishedBy>
+      <types1:PublicationDate>2024-06-25T16:56:45Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Manage_Customer_Snowflake/Manage_Customer_Snowflake.pd.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Manage Customer Snowflake"
+                  name="Manage_Customer_Snowflake"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description=""
+                          name="Customer_In"
+                          required="false"
+                          type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">$po:CustomerPO</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">9YpatgJ0BQ1duG4NOReBgy</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="Customer" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:CustomerPO</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">9YpatgJ0BQ1duG4NOReBgy</option>
+                  </options>
+               </field>
+               <field description="" name="Customer_ID" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="Lookup_Customer" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">Snowflake:CUSTOMER</option>
+                     <option name="guid">eFpr8JCrVsibTB09ZpWcyq</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="CustomerID" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="httpMethod" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="Title" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tempEmail" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="SnowTable" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">Snowflake:CUSTOMER</option>
+                     <option name="guid">eFpr8JCrVsibTB09ZpWcyq</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyStringAsNull">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsNotArray">false</nvpair>
+            </extData>
+            <flow id="nf65ab19b-388e-4b92-a1e8-e5c70b7eb0cf">
+               <start id="pb872c19c-c7c2-4ace-85be-3fe83d24ca52">
+                  <link id="wcbcb3c97-8b8f-45f4-a509-dcb712ef8d90"
+                        targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp50v"/>
+               </start>
+               <assignment id="a1dqMBw52ysqYcMPhIFDNLew-l44vp50v">
+                  <title>Extract HTTP Verb</title>
+                  <operation source="formula" to="temp.httpMethod">
+                     <expression language="XQuery">request:getRequestHTTPVerb()</expression>
+                  </operation>
+                  <operation source="formula" to="temp.CustomerID">
+                     <expression language="XQuery">request:getResourcePathSegments()[1]</expression>
+                  </operation>
+                  <link id="y047b9bf7-bbb6-4942-9faa-98c20dd258a6"
+                        targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp516"/>
+               </assignment>
+               <container id="a1dqMBw52ysqYcMPhIFDNLew-l44vp516" type="exclusive">
+                  <title>httpMethod</title>
+                  <flow id="y76df152f-aabe-45e3-a719-596b04625269">
+                     <assignment id="a1dqMBw52ysqYcMPhIFDNLew-l44vp550">
+                        <title>Query Snowflake by ID</title>
+                        <operation source="query" to="temp.Lookup_Customer">
+                           <query advanceQuery="false" from="Snowflake:CUSTOMER">
+                              <where>CUSTOMER_ID = '{$temp.CustomerID}'</where>
+                           </query>
+                        </operation>
+                        <link id="n57175b6e-4060-49e9-8534-28ffdf49e47a"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp558"/>
+                     </assignment>
+                     <assignment id="a1dqMBw52ysqYcMPhIFDNLew-l44vp558">
+                        <title>Prepare Response</title>
+                        <operation source="field" to="output.Customer[1]/FirstName">temp.Lookup_Customer[1]/FIRST_NAME</operation>
+                        <operation source="field" to="output.Customer[1]/LastName">temp.Lookup_Customer[1]/LAST_NAME</operation>
+                        <operation source="formula" to="output.Customer[1]/Email">
+                           <expression language="XQuery">$temp.Lookup_Customer[1]/EMAIL </expression>
+                        </operation>
+                        <operation source="field" to="output.Customer[1]/Address[1]/Street_Address">temp.Lookup_Customer[1]/STREET_ADDRESS</operation>
+                        <operation source="field" to="output.Customer[1]/Address[1]/City">temp.Lookup_Customer[1]/CITY</operation>
+                        <operation source="field" to="output.Customer[1]/Address[1]/State">temp.Lookup_Customer[1]/STATE</operation>
+                        <operation source="field" to="output.Customer[1]/Address[1]/Country">temp.Lookup_Customer[1]/COUNTRY</operation>
+                        <operation source="field" to="output.Customer[1]/Address[1]/Postal_Code">temp.Lookup_Customer[1]/ZIP</operation>
+                        <operation source="field" to="output.Customer_ID">temp.Lookup_Customer[1]/CUSTOMER_ID</operation>
+                        <operation source="formula" to="output.Customer[1]/Phone">
+                           <expression language="XQuery">$temp.Lookup_Customer.PHONENUM </expression>
+                        </operation>
+                        <link id="vb61e3345-3228-4811-830f-520eb3537e42"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp55h"/>
+                     </assignment>
+                     <assignment id="a1dqMBw52ysqYcMPhIFDNLew-l44vp55h">
+                        <title>Set Process Title</title>
+                        <operation source="formula" to="temp.Title">
+                           <expression language="XQuery">let $title := 'Get Customer '||$output.Customer[1]/FirstName  ||' -'||$temp.CustomerID  
+return ipd:setProcessTitle($title)</expression>
+                        </operation>
+                        <link id="c6d29ff32-8173-4bfc-9cc5-598d4e815457"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp56i"/>
+                     </assignment>
+                     <end id="a1dqMBw52ysqYcMPhIFDNLew-l44vp56i">
+                        <title>Return 200</title>
+                     </end>
+                  </flow>
+                  <flow id="yfc141d5a-2a5f-4514-a26e-8423e9d4b4ad">
+                     <subflow id="a1dqMBw52ysqYcMPhIFDNLew-l44vp55q">
+                        <title>Validate Address</title>
+                        <subflowGUID>4ggUfLTVgnjk6Ad8bV9D6V</subflowGUID>
+                        <subflowPath>Validate_Address</subflowPath>
+                        <appliesTo>$po:AddressPO</appliesTo>
+                        <appliesToDataName source="field">input.Customer_In[1]/Address</appliesToDataName>
+                        <runForEach>false</runForEach>
+                        <input/>
+                        <outputDef>
+                           <field description="" name="Validated" type="picklist">
+                              <options>
+                                 <option name="values">[{"label":"Yes","value":"Yes"},{"label":"No","value":"No"}]</option>
+                                 <option name="required">false</option>
+                              </options>
+                           </field>
+                           <field description="" name="Error_Message" type="string">
+                              <options>
+                                 <option name="required">false</option>
+                              </options>
+                           </field>
+                           <field description="" name="StandardizedStreet" type="string">
+                              <options>
+                                 <option name="required">false</option>
+                              </options>
+                           </field>
+                           <field description="" name="StandardizedCity" type="string">
+                              <options>
+                                 <option name="required">false</option>
+                              </options>
+                           </field>
+                           <field description="" name="StandardizedZip" type="string">
+                              <options>
+                                 <option name="required">false</option>
+                              </options>
+                           </field>
+                           <field description="" name="StandardizedCountry" type="string">
+                              <options>
+                                 <option name="required">false</option>
+                              </options>
+                           </field>
+                           <field description="" name="StandardizedState" type="string">
+                              <options>
+                                 <option name="required">false</option>
+                              </options>
+                           </field>
+                        </outputDef>
+                        <link id="pe075f55a-51c0-4497-85c5-f88ca7812807"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp55z"/>
+                     </subflow>
+                     <create id="a1dqMBw52ysqYcMPhIFDNLew-l44vp55z">
+                        <title>CUSTOMER</title>
+                        <entityName>Snowflake:CUSTOMER</entityName>
+                        <createInput>
+                           <parameter name="FIRST_NAME" source="field" updatable="true">input.Customer_In[1]/FirstName</parameter>
+                           <parameter name="LAST_NAME" source="field" updatable="true">input.Customer_In[1]/LastName</parameter>
+                           <parameter name="EMAIL" source="field" updatable="true">input.Customer_In[1]/Email</parameter>
+                           <parameter name="STREET_ADDRESS" source="field" updatable="true">input.Customer_In[1]/Address[1]/Street_Address</parameter>
+                           <parameter name="CITY" source="field" updatable="true">input.Customer_In[1]/Address[1]/City</parameter>
+                           <parameter name="COUNTRY" source="field" updatable="true">input.Customer_In[1]/Address[1]/Country</parameter>
+                           <parameter name="STATE" source="field" updatable="true">input.Customer_In[1]/Address[1]/State</parameter>
+                           <parameter name="ZIP" source="field" updatable="true">input.Customer_In[1]/Address[1]/Postal_Code</parameter>
+                           <parameter name="CUSTOMER_ID" source="field" updatable="true">input.Customer_In[1]/Id</parameter>
+                           <parameter name="PHONENUM" source="field" updatable="true">input.Customer_In[1]/Phone</parameter>
+                        </createInput>
+                        <link id="hd672f0f4-938b-4bd7-a66d-30cf7c362bda"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp569"/>
+                     </create>
+                     <assignment id="a1dqMBw52ysqYcMPhIFDNLew-l44vp569">
+                        <title>Set Process Title</title>
+                        <operation source="formula" to="output.Customer_ID">
+                           <expression language="XQuery">util:getProcessId()</expression>
+                        </operation>
+                        <link id="rb43e4d2d-a4ee-4427-95ba-02c34cb5c34f"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp56q"/>
+                     </assignment>
+                     <end id="a1dqMBw52ysqYcMPhIFDNLew-l44vp56q">
+                        <title>Return 201</title>
+                     </end>
+                  </flow>
+                  <flow id="f912fd7dd-bfbf-4063-8a58-34c49fa00b06">
+                     <assignment id="a1dqMBw52ysqYcMPhIFDNLew-ljxbpbn1">
+                        <title>Query Snowflake by ID 1</title>
+                        <operation source="query" to="temp.Lookup_Customer">
+                           <query advanceQuery="false" from="Snowflake:CUSTOMER">
+                              <where>CUSTOMER_ID = '{$temp.CustomerID}'</where>
+                           </query>
+                        </operation>
+                        <link id="j7cd6416a-c5cd-4cf2-a3f1-4fcb6a1e9862"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-ljyv31eb"/>
+                     </assignment>
+                     <container id="a1dqMBw52ysqYcMPhIFDNLew-ljyv31eb" type="exclusive">
+                        <title>Lookup_Customer</title>
+                        <flow id="tf89dacc3-8090-47ac-9e07-ce243bf3a67d">
+                           <assignment id="a1dqMBw52ysqYcMPhIFDNLew-ljyv31ex">
+                              <title>Update Snowflake Record</title>
+                              <operation source="formula" to="temp.Lookup_Customer[1]/CUSTOMER_ID">
+                                 <expression language="XQuery">$temp.Lookup_Customer[1]/CUSTOMER_ID </expression>
+                              </operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/EMAIL">input.Customer_In[1]/Email</operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/CITY">input.Customer_In[1]/Address[1]/City</operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/COUNTRY">input.Customer_In[1]/Address[1]/Country</operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/FIRST_NAME">input.Customer_In[1]/FirstName</operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/LAST_NAME">input.Customer_In[1]/LastName</operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/PHONENUM">input.Customer_In[1]/Phone</operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/STATE">input.Customer_In[1]/Address[1]/State</operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/STREET_ADDRESS">input.Customer_In[1]/Address[1]/Street_Address</operation>
+                              <operation source="field" to="temp.Lookup_Customer[1]/ZIP">input.Customer_In[1]/Address[1]/Postal_Code</operation>
+                           </assignment>
+                           <link id="ie0652cb8-a1eb-400e-af2c-eb1edbca024a"
+                                 targetId="a1dqMBw52ysqYcMPhIFDNLew-ljyv31eb"
+                                 type="containerLink"/>
+                        </flow>
+                        <flow id="g4909f903-6193-4b8b-b166-263d2297d78e">
+                           <end id="a1dqMBw52ysqYcMPhIFDNLew-ljyv31fh">
+                              <title>End 2</title>
+                              <httpStatus>204</httpStatus>
+                           </end>
+                        </flow>
+                        <link id="o170e86c0-4c57-47a9-9fff-d57299f06b6e"
+                              targetId="tf89dacc3-8090-47ac-9e07-ce243bf3a67d"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="set">
+                                 <arg name="field">{$temp.Lookup_Customer}</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="xd3581053-e75e-4a7c-810b-f347e122e50f"
+                              targetId="g4909f903-6193-4b8b-b166-263d2297d78e"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="unset">
+                                 <arg name="field">{$temp.Lookup_Customer}</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="p479a4498-1259-44ad-aa76-486bea3897b3"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp57a"/>
+                     </container>
+                     <end id="a1dqMBw52ysqYcMPhIFDNLew-l44vp57a">
+                        <title>Return 204</title>
+                     </end>
+                  </flow>
+                  <flow id="bd6c7dae1-97bc-4b34-af9b-04aaf6a57626">
+                     <assignment id="a1dqMBw52ysqYcMPhIFDNLew-ljsrog0f">
+                        <title>Assignment to Lookup_Customer</title>
+                        <operation source="query" to="temp.Lookup_Customer">
+                           <query advanceQuery="false" from="Snowflake:CUSTOMER">
+                              <where>CUSTOMER_ID = '{$temp.CustomerID}'</where>
+                           </query>
+                        </operation>
+                        <link id="i81edf1b4-271a-44b1-8ba4-38663d2eeb08"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-ljsrog46"/>
+                     </assignment>
+                     <assignment id="a1dqMBw52ysqYcMPhIFDNLew-l44vp57n">
+                        <title>Set Process Title</title>
+                        <operation source="formula" to="temp.Title">
+                           <expression language="XQuery">let $title := 'Delete Customer '||' -'||$temp.CustomerID  
+return ipd:setProcessTitle($title)</expression>
+                        </operation>
+                     </assignment>
+                     <container id="a1dqMBw52ysqYcMPhIFDNLew-ljsrog46" type="exclusive">
+                        <title>DeleteCustomer</title>
+                        <flow id="o8b27b2c5-f86e-43d6-99b6-4e35c20eb546">
+                           <service id="a1dqMBw52ysqYcMPhIFDNLew-ljsrog4r">
+                              <title>Delete Snowflake Record</title>
+                              <serviceName>avDeleteAnyEntityService</serviceName>
+                              <serviceGUID/>
+                              <serviceInput>
+                                 <parameter name="Connection Name" source="constant">Snowflake</parameter>
+                                 <parameter name="Object Type" source="constant">CUSTOMER</parameter>
+                                 <parameter name="Object Id" source="formula">
+                                    <expression language="XQuery">$input.Customer_In/Id</expression>
+                                 </parameter>
+                              </serviceInput>
+                           </service>
+                           <link id="pa62207b8-8a84-463a-b1d6-21ad0c4c1182"
+                                 targetId="a1dqMBw52ysqYcMPhIFDNLew-ljsrog46"
+                                 type="containerLink"/>
+                        </flow>
+                        <flow id="w8e95acf9-250f-4b64-9f25-0e0542a76aa0">
+                           <end id="a1dqMBw52ysqYcMPhIFDNLew-ljyv31dj">
+                              <title>End 1</title>
+                              <httpStatus>204</httpStatus>
+                           </end>
+                        </flow>
+                        <link id="g1b109746-5cf2-4dcc-9326-78d029723a5b"
+                              targetId="o8b27b2c5-f86e-43d6-99b6-4e35c20eb546"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="set">
+                                 <arg name="field">{$temp.Lookup_Customer}</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="d10b15c65-b9fc-483e-b791-0b416145998c"
+                              targetId="w8e95acf9-250f-4b64-9f25-0e0542a76aa0"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="unset">
+                                 <arg name="field">{$temp.Lookup_Customer}</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="r3557c005-6590-465e-bf1f-c874cbd42eb6"
+                              targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp57n"/>
+                     </container>
+                     <link id="e2071c19a-0d20-42e1-b099-42b53fe01100"
+                           targetId="a1dqMBw52ysqYcMPhIFDNLew-l44vp516"
+                           type="containerLink"/>
+                  </flow>
+                  <flow id="x35e389c1-6649-4bee-90ff-e29840427733">
+                     <end id="a1dqMBw52ysqYcMPhIFDNLew-l44vp57t">
+                        <title>End 4</title>
+                        <httpStatus>204</httpStatus>
+                     </end>
+                  </flow>
+                  <link id="j006c372d-11d7-4e23-a42e-86591dd7e02e"
+                        targetId="y76df152f-aabe-45e3-a719-596b04625269"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$temp.httpMethod}</arg>
+                           <arg name="right">GET</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="ld63a6887-2bb3-4001-920a-2fa7fa3051cc"
+                        targetId="yfc141d5a-2a5f-4514-a26e-8423e9d4b4ad"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$temp.httpMethod}</arg>
+                           <arg name="right">POST</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="kdc162b84-4b00-479d-ace1-f98b49575e17"
+                        targetId="f912fd7dd-bfbf-4063-8a58-34c49fa00b06"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$temp.httpMethod}</arg>
+                           <arg name="right">PUT</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="y19f6145b-c520-43ac-bf64-7f2cca99c6a5"
+                        targetId="bd6c7dae1-97bc-4b34-af9b-04aaf6a57626"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$temp.httpMethod}</arg>
+                           <arg name="right">DELETE</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="cd5cd41bf-aa7e-4340-a91f-8f7123d5b8ba"
+                        targetId="x35e389c1-6649-4bee-90ff-e29840427733"
+                        type="containerLink"/>
+                  <link id="g799118eb-272b-4ea0-87da-1b5ed5b291ef"
+                        targetId="a1dqMBw52ysqYcMPhIFDNLew-c"/>
+               </container>
+               <end id="a1dqMBw52ysqYcMPhIFDNLew-c">
+                  <title>Return 204</title>
+                  <httpStatus>204</httpStatus>
+               </end>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>546dc86f-aead-40b7-8a67-5ae18c124251</ns1:Id>
+               <ns1:Name>test2</ns1:Name>
+               <ns1:CreatedBy>kclancy_ENT_Donald_tspod_SO</ns1:CreatedBy>
+               <ns1:CreationDate>2024-06-12T22:05:22Z</ns1:CreationDate>
+               <ns1:ModifiedBy>kclancy_ENT_Donald_tspod_SO</ns1:ModifiedBy>
+               <ns1:ModificationDate>2024-06-12T22:05:22Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+    "Customer_In": {
+        "Phone": "9736475498",
+        "Website": "test",
+        "Address": {
+            "Street_Address": "30 W 9th Street",
+            "Postal_Code": "10011",
+            "State": "NY",
+            "City": "New York",
+            "Country": "USA",
+            "Address_Type": "Mailing"
+        },
+        "Email": "bungemach@informatica.com",
+        "Id": "test",
+        "Name": "Brendan Ungemach",
+        "FirstName": "Brendan",
+        "LastName": "Ungemach"
+    }
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>dqMBw52ysqYcMPhIFDNLew</types1:GUID>
+      <types1:DisplayName>Manage Customer Snowflake</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.777Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

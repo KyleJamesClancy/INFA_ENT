@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "8HEO94ZuXfQhIuDsacRJGQ",
+    "name" : "3Step_FirstApprover",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "NCx1H5lRuImXyco-gt-124588-2024-05-29T01:17:51.636Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Three Step First Approver HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.425Z",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "8F3ubXi7f8Kb8msxkixaKC",
+    "name" : "FlatFile",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "GqpfZJdqVIKchzt-gt-146635-2024-06-21T13:26:19.522Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.432Z",
+  "objectRefs" : [ ]
+}

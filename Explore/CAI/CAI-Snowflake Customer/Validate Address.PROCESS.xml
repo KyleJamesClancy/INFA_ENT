@@ -1,0 +1,168 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>33HV8F4MTD86Cjq-gt-1403851-2024-06-12T22:05:21.882Z::pd.xml</types1:EntryId>
+      <types1:Name>Validate_Address</types1:Name>
+      <types1:ParentFlowIds>xIS7T1cnFKi9zhF-gt-1403172-2024-06-12T22:05:22.381Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo>$po:AddressPO</types1:AppliesTo>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-06-12T22:05:22Z</types1:CreationDate>
+      <types1:ModifiedBy>kclancy_ENT_Donald_tspod_SO</types1:ModifiedBy>
+      <types1:ModificationDate>2024-06-12T22:49:05Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>kclancy_ENT_Donald_tspod_SO</types1:PublishedBy>
+      <types1:PublicationDate>2024-06-25T16:56:45Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Validate_Address/Validate_Address.pd.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Validate Address"
+                  name="Validate_Address"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo>$po:AddressPO</appliesTo>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="Validated" type="picklist">
+                  <options>
+                     <option name="values">[{"label":"Yes","value":"Yes"},{"label":"No","value":"No"}]</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="Error_Message" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="StandardizedStreet" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="StandardizedCity" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="StandardizedZip" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="StandardizedCountry" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="StandardizedState" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="Score" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyStringAsNull">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsNotArray">false</nvpair>
+            </extData>
+            <flow id="v36f7a783-499a-4dcc-ad58-56a317336e71">
+               <start id="kc99ec5d2-2c04-414f-84b7-10f3f9b8a728">
+                  <link id="ma6aea86c-252c-4522-9b32-04fd23303eb2"
+                        targetId="a14ggUfLTVgnjk6Ad8bV9D6V-j527icjq"/>
+               </start>
+               <service id="a14ggUfLTVgnjk6Ad8bV9D6V-j527icjq">
+                  <title>Call Address Doctor</title>
+                  <serviceName>INFA-AD:Interactive</serviceName>
+                  <serviceGUID>7Ckk3ToW52SdzNpRSOaxso</serviceGUID>
+                  <serviceInput>
+                     <parameter name="addressStreet" source="field">Street_Address</parameter>
+                     <parameter name="addressCity" source="field">City</parameter>
+                     <parameter name="addressState" source="field">State</parameter>
+                     <parameter name="addressCountry" source="field">Country</parameter>
+                  </serviceInput>
+                  <link id="m1123d47c-67b4-4b7b-9a5b-1af04055955a"
+                        targetId="a14ggUfLTVgnjk6Ad8bV9D6V-j527icmh"/>
+               </service>
+               <assignment id="a14ggUfLTVgnjk6Ad8bV9D6V-j527icmh">
+                  <title>Extract Score</title>
+                  <operation source="formula" to="temp.Score">
+                     <expression language="XQuery">$output.ResultScore</expression>
+                  </operation>
+                  <link id="yd188c982-726b-441c-a040-6b9820b948c3"
+                        targetId="a14ggUfLTVgnjk6Ad8bV9D6V-j4zturr0"/>
+               </assignment>
+               <container id="a14ggUfLTVgnjk6Ad8bV9D6V-j4zturr0" type="exclusive">
+                  <title>Score</title>
+                  <flow id="k21f0da25-a57e-4dc0-bd44-dc4d5a464bc3">
+                     <assignment id="a14ggUfLTVgnjk6Ad8bV9D6V-j527icln">
+                        <title>Assignment to Validated, Street_Address etc.</title>
+                        <operation source="constant" to="output.Validated">Yes</operation>
+                        <operation source="field" to="Street_Address">output.StandardizedStreet</operation>
+                        <operation source="field" to="City">output.StandardizedCity</operation>
+                        <operation source="field" to="State">output.StandardizedState</operation>
+                        <operation source="field" to="Postal_Code">output.StandardizedZip</operation>
+                        <operation source="field" to="Country">output.StandardizedCountry</operation>
+                        <link id="u1d75b223-7e4d-4a47-b592-7c8cc16b61df"
+                              targetId="a14ggUfLTVgnjk6Ad8bV9D6V-j4ztursb"/>
+                     </assignment>
+                     <end id="a14ggUfLTVgnjk6Ad8bV9D6V-j4ztursb">
+                        <title>End</title>
+                     </end>
+                  </flow>
+                  <flow id="p42b718b8-98ea-40c9-b1bf-e6cd0fca1661">
+                     <assignment id="a14ggUfLTVgnjk6Ad8bV9D6V-j4zturra">
+                        <title>Assignment to Validated</title>
+                        <operation source="constant" to="output.Validated">Yes</operation>
+                        <operation source="field" to="output.Error_Message">output.StatusMessage</operation>
+                        <link id="j67763c63-68d7-4e79-ade3-d9de6752fd27"
+                              targetId="a14ggUfLTVgnjk6Ad8bV9D6V-j4zturvu"/>
+                     </assignment>
+                     <end id="a14ggUfLTVgnjk6Ad8bV9D6V-j4zturvu">
+                        <title>End</title>
+                     </end>
+                  </flow>
+                  <link id="u2e675e65-71a0-4e83-b25f-ec08a1faa51c"
+                        targetId="k21f0da25-a57e-4dc0-bd44-dc4d5a464bc3"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="greater-than">
+                           <arg name="left">{$temp.Score}</arg>
+                           <arg name="right">{50}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="u1f534468-bb82-40ac-92e7-545f15be713f"
+                        targetId="p42b718b8-98ea-40c9-b1bf-e6cd0fca1661"
+                        type="containerLink"/>
+               </container>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>4ggUfLTVgnjk6Ad8bV9D6V</types1:GUID>
+      <types1:DisplayName>Validate Address</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.035Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

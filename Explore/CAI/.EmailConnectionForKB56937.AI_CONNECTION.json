@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "f4MgNhJ4SIFdkcL6i6A0C9",
+    "name" : "EmailConnectionForKB56937",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "abdpIO3M4WwOC2X-gt-1068754-2024-06-07T15:50:05.501Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.427Z",
+  "objectRefs" : [ ]
+}

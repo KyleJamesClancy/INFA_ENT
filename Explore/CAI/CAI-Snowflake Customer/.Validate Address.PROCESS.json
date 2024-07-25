@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "4ggUfLTVgnjk6Ad8bV9D6V",
+    "name" : "Validate Address",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "33HV8F4MTD86Cjq-gt-1403851-2024-06-12T22:05:21.882Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.424Z",
+  "objectRefs" : [ {
+    "id" : "7Ckk3ToW52SdzNpRSOaxso",
+    "name" : "INFA-AD",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "B7O2htghGZ5i4rs-gt-1403827-2024-06-12T22:05:21.446Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Standard CAI Demo Assets/Connections"
+  } ]
+}

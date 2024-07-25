@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "3gAOqpDOTuCb7FTUWPrqqX",
+    "name" : "CSVFileReaderForCAI",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "DINciZBpDUQbgdw-gt-1068746-2024-06-07T15:50:05.447Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connection - Reads CSV Files in a CAI Process",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.420Z",
+  "objectRefs" : [ ]
+}

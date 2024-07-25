@@ -1,0 +1,56 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>abdpIO3M4WwOC2X-gt-1068754-2024-06-07T15:50:05.501Z::conn.xml</types1:EntryId>
+      <types1:Name>EmailConnectionForKB56937</types1:Name>
+      <types1:ParentFlowIds>2gdpIO3M4WwOC2X-gt-1067958-2024-06-07T15:50:05.85Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-06-07T15:50:06Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>kclancy_ENT_Donald_tspod_SO</types1:PublishedBy>
+      <types1:PublicationDate>2024-06-07T15:51:45Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/EmailConnectionForKB56937/EmailConnectionForKB56937.conn.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="EmailConnectionForKB56937"
+                     label="EmailConnectionForKB56937"
+                     name="EmailConnectionForKB56937">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false" name="Authentication" value="Enable"/>
+               <attribute encrypted="false" name="hostName" value="smtp.mail.yahoo.com"/>
+               <attribute encrypted="false" name="port" value="465"/>
+               <attribute encrypted="false" name="username" value="test@yahoo.com"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="security" value="SSL"/>
+               <attribute encrypted="false" name="connectionTimeout" value="30000"/>
+               <attribute encrypted="false" name="testToAddress" value="user@test.com"/>
+               <attribute encrypted="false" name="fromAddress" value="test@yahoo.com"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="false"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           type="Email"
+                           uuid="9a8a03d0-0437-46c4-bedf-70acb4173c1f">
+               <description>Provides connections to email host servers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>f4MgNhJ4SIFdkcL6i6A0C9</types1:GUID>
+      <types1:DisplayName>EmailConnectionForKB56937</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:25.864Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

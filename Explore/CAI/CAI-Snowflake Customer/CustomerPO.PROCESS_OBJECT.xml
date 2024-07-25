@@ -1,0 +1,47 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>lu6zqzm5Y6tMFyg-gt-1403839-2024-06-12T22:05:21.82Z::po.xml</types1:EntryId>
+      <types1:Name>CustomerPO</types1:Name>
+      <types1:ParentFlowIds>xIS7T1cnFKi9zhF-gt-1403172-2024-06-12T22:05:22.381Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-06-12T22:05:22Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="CustomerPO"
+                        isByCopy="true"
+                        name="CustomerPO">
+            <description/>
+            <tags/>
+            <detail>
+               <field label="Phone" name="Phone" type="phone"/>
+               <field label="Website" name="Website" type="string"/>
+               <field label="Address" name="Address" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:AddressPO</option>
+                     <option name="guid">21kD2blIHVFezm8nqXwxgz</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="Email" name="Email" type="email"/>
+               <field label="Id" name="Id" type="string"/>
+               <field label="Name" name="Name" type="string"/>
+               <field label="FirstName" name="FirstName" type="string"/>
+               <field label="LastName" name="LastName" type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>9YpatgJ0BQ1duG4NOReBgy</types1:GUID>
+      <types1:DisplayName>CustomerPO</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.635Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

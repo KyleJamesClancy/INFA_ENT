@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "eepr9J6WVYthifksxcW3Is",
+    "name" : "Snowflake-Service connector",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "M2AeFz7M1reAFLK-gt-464873-2023-10-12T19:45:10.623Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.423Z",
+  "objectRefs" : [ ]
+}

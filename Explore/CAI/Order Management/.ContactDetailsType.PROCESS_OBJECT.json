@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "4n9NBVthXoclfUVVh6xaIp",
+    "name" : "ContactDetailsType",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "XRZXDyvs7xvk0qZ-gt-567495-2024-07-16T17:47:13.804Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [contactDetailsType complex type] located in the [PurchaseOrder.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.435Z",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "0jaIfZqIUBdjsXiHUqjY8V",
+    "name" : "3Step_SecondApprover",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "7lNaaabdvhxiQLn-gt-124598-2024-05-29T01:17:51.939Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Three Step Second Approver HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.434Z",
+  "objectRefs" : [ ]
+}

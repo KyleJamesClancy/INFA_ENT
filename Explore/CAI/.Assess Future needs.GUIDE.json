@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "5wHCkgZqhXSkkuQfsA9Hm1",
+    "name" : "Assess Future needs",
+    "type" : "GUIDE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "WeIssjqluQgabcj-gt-3771370-2024-01-25T19:15:41.78Z::gt.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Assess Future Needs for our product within the organization. Data collected here will help in estimating the renewal pipeline.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.423Z",
+  "objectRefs" : [ ]
+}

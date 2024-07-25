@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "21kD2blIHVFezm8nqXwxgz",
+    "name" : "AddressPO",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "iaa-gt-1403817-2024-06-12T22:05:21.41Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.427Z",
+  "objectRefs" : [ ]
+}

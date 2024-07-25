@@ -1,0 +1,418 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>i1NjtaaabbgdoGs-gt-124610-2024-05-29T01:17:52.136Z::pd.xml</types1:EntryId>
+      <types1:Name>MultiStep_Workflow</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>Manage Asset three Step Process</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-05-29T01:17:52Z</types1:CreationDate>
+      <types1:ModifiedBy>kclancy_ENT_Donald_tspod_SO</types1:ModifiedBy>
+      <types1:ModificationDate>2024-05-29T01:26:41Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="MultiStep_Workflow"
+                  name="MultiStep_Workflow"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>Manage Asset three Step Process</description>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="First Approver Input Desc"
+                          name="FirstApprover"
+                          required="true"
+                          type="reference">
+                  <options>
+                     <option name="referenceTo">$po:AeHumanTaskAssignment</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+               <parameter description="Second Approver Input Desc"
+                          name="SecondApprover"
+                          required="true"
+                          type="reference">
+                  <options>
+                     <option name="referenceTo">$po:AeHumanTaskAssignment</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+               <parameter description="Final Approver Input Desc"
+                          name="FinalApprover"
+                          required="true"
+                          type="reference">
+                  <options>
+                     <option name="referenceTo">$po:AeHumanTaskAssignment</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+               <parameter description="Asset Name Input Desc"
+                          name="AssetName"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="All Stakeholders Input Desc"
+                          name="AllStakeholders"
+                          required="true"
+                          type="reference">
+                  <options>
+                     <option name="referenceTo">$po:AeHumanTaskAssignment</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+               <parameter description="EditUser Input Desc"
+                          name="EditUser"
+                          required="true"
+                          type="reference">
+                  <options>
+                     <option name="referenceTo">$po:AeHumanTaskAssignment</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="normal">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsNotArray">false</nvpair>
+            </extData>
+            <flow id="x4c9878f7-a97d-450d-85dc-237df4338409">
+               <start id="n7780ca06-f5d1-4178-a9a4-a85bbb1d8e0d">
+                  <link id="r8f4374f7-1847-45ab-bb74-823bf3767e63"
+                        targetId="a14eoJJO5IFWflHEVCJs0gY4-locsk4uv"/>
+               </start>
+               <milestone id="a14eoJJO5IFWflHEVCJs0gY4-locsk4uv">
+                  <title>Milestone</title>
+                  <link id="ybb0e0b7d-dc6c-46ca-9037-b592fcf6baf8"
+                        targetId="a14eoJJO5IFWflHEVCJs0gY4-lozcsa1k"/>
+               </milestone>
+               <humanTask id="a14eoJJO5IFWflHEVCJs0gY4-lozcsa1k">
+                  <title>3Step_FirstApprover</title>
+                  <subflowGUID>8HEO94ZuXfQhIuDsacRJGQ</subflowGUID>
+                  <subflowPath>3Step_FirstApprover</subflowPath>
+                  <peopleActivityName>3Step_FirstApprover</peopleActivityName>
+                  <asset>
+                     <GUID>8HEO94ZuXfQhIuDsacRJGQ</GUID>
+                     <taskName>3Step_FirstApprover</taskName>
+                  </asset>
+                  <input>
+                     <field name="AssetName" source="constant"/>
+                  </input>
+                  <outputDef>
+                     <field name="taskOutcome" type="string"/>
+                  </outputDef>
+                  <config>
+                     <disableOutcomeLinksGeneration>true</disableOutcomeLinksGeneration>
+                  </config>
+                  <link id="y60f2a645-74cc-404d-adae-1c485a0651f2"
+                        targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwlr"/>
+               </humanTask>
+               <container id="a14eoJJO5IFWflHEVCJs0gY4-locslwlr" type="exclusive">
+                  <title>Task Outcome</title>
+                  <flow id="l1643a6cc-008d-49ad-87a6-6f4287389af0">
+                     <humanTask id="a14eoJJO5IFWflHEVCJs0gY4-lozcsahn">
+                        <title>3Step_SecondApprover</title>
+                        <subflowGUID>0jaIfZqIUBdjsXiHUqjY8V</subflowGUID>
+                        <subflowPath>3Step_SecondApprover</subflowPath>
+                        <peopleActivityName>3Step_SecondApprover</peopleActivityName>
+                        <asset>
+                           <GUID>0jaIfZqIUBdjsXiHUqjY8V</GUID>
+                           <taskName>3Step_SecondApprover</taskName>
+                        </asset>
+                        <input>
+                           <field name="AssetName" source="constant"/>
+                        </input>
+                        <outputDef>
+                           <field name="taskOutcome" type="string"/>
+                        </outputDef>
+                        <config>
+                           <disableOutcomeLinksGeneration>true</disableOutcomeLinksGeneration>
+                        </config>
+                        <link id="h90db06a9-46c5-4776-9cbf-a4f48d397089"
+                              targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwo4"/>
+                     </humanTask>
+                     <container id="a14eoJJO5IFWflHEVCJs0gY4-locslwo4" type="exclusive">
+                        <title>Task Outcome</title>
+                        <flow id="ic88c317c-cb05-475b-ad6d-fd15f0fee0f4">
+                           <humanTask id="a14eoJJO5IFWflHEVCJs0gY4-lozcsao2">
+                              <title>3Step_FinalApprover</title>
+                              <subflowGUID>9Q2kHKgMSZVe4r3IixBR6D</subflowGUID>
+                              <subflowPath>3Step_FinalApprover</subflowPath>
+                              <peopleActivityName>3Step_FinalApprover</peopleActivityName>
+                              <asset>
+                                 <GUID>9Q2kHKgMSZVe4r3IixBR6D</GUID>
+                                 <taskName>3Step_FinalApprover</taskName>
+                              </asset>
+                              <input>
+                                 <field name="AssetName" source="constant"/>
+                              </input>
+                              <outputDef>
+                                 <field name="taskOutcome" type="string"/>
+                              </outputDef>
+                              <config>
+                                 <disableOutcomeLinksGeneration>true</disableOutcomeLinksGeneration>
+                              </config>
+                              <link id="vbd893ac7-21d2-4e34-ab82-84f8715a1bde"
+                                    targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwvm"/>
+                           </humanTask>
+                           <container id="a14eoJJO5IFWflHEVCJs0gY4-locslwvm" type="exclusive">
+                              <title>Task Outcome</title>
+                              <flow id="o550b7170-e310-40d7-b94f-c9a206202a84">
+                                 <link id="c111e3644-fba6-4d3a-9fa5-afa5c55d440b"
+                                       targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwvm"
+                                       type="containerLink"/>
+                              </flow>
+                              <flow id="tc0de9101-e937-40a7-af5e-ae2c8824d605">
+                                 <link id="c5a015d44-b393-4168-a530-1ae3b6629a25"
+                                       targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwvm"
+                                       type="containerLink"/>
+                              </flow>
+                              <flow id="z65a6d275-79aa-49df-b800-813bf288dec6">
+                                 <jumpTo id="a14eoJJO5IFWflHEVCJs0gY4-locslwz4">
+                                    <link id="g49fcd66b-0431-4b76-b1e5-6819f0e17333"
+                                          targetId="a14eoJJO5IFWflHEVCJs0gY4-lozcsahn"/>
+                                 </jumpTo>
+                              </flow>
+                              <flow id="n41642589-c68d-4999-9e82-59a3193f77bf">
+                                 <link id="s1081ec1c-566b-4b37-abbf-925b7e33cac5"
+                                       targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwvm"
+                                       type="containerLink"/>
+                              </flow>
+                              <link id="pb58105be-b49d-422d-81b6-e970829daa47"
+                                    targetId="o550b7170-e310-40d7-b94f-c9a206202a84"
+                                    type="containerLink">
+                                 <condition source="formula">
+                                    <function name="contains">
+                                       <arg name="left">{$output.taskOutcome}</arg>
+                                       <arg name="right">Approve</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="s9b94c985-88fe-42fd-ad2d-b4e1baa90e1f"
+                                    targetId="tc0de9101-e937-40a7-af5e-ae2c8824d605"
+                                    type="containerLink">
+                                 <condition source="formula">
+                                    <function name="contains">
+                                       <arg name="left">{$output.taskOutcome}</arg>
+                                       <arg name="right">Reject</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="xe45e4366-c02c-4261-a1c1-c6180d766a4c"
+                                    targetId="z65a6d275-79aa-49df-b800-813bf288dec6"
+                                    type="containerLink">
+                                 <condition source="formula">
+                                    <function name="contains">
+                                       <arg name="left">{$output.taskOutcome}</arg>
+                                       <arg name="right">Return</arg>
+                                    </function>
+                                 </condition>
+                              </link>
+                              <link id="gada203ff-43f9-414b-a0d3-5670aeda06f7"
+                                    targetId="n41642589-c68d-4999-9e82-59a3193f77bf"
+                                    type="containerLink"/>
+                           </container>
+                           <link id="g5820d339-ab49-4099-b9f3-8dc76792ba09"
+                                 targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwo4"
+                                 type="containerLink"/>
+                        </flow>
+                        <flow id="wb77ecd38-99ed-4bfe-8bd1-216f4b2d7824">
+                           <link id="fdd94b3fd-1064-4ff5-8ab6-800a7cac835a"
+                                 targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwo4"
+                                 type="containerLink"/>
+                        </flow>
+                        <flow id="h0e1d24bc-765c-4e5b-b6b4-808576e5d14c">
+                           <jumpTo id="a14eoJJO5IFWflHEVCJs0gY4-locslwzy">
+                              <link id="s178da2ef-9a44-405b-9a85-0d35585f4d8c"
+                                    targetId="a14eoJJO5IFWflHEVCJs0gY4-lozcsa1k"/>
+                           </jumpTo>
+                        </flow>
+                        <flow id="q4bcfbcd6-5b6e-4dce-837d-52fbb17d7d1e">
+                           <link id="ve048e06a-3f73-4132-bcaa-72f0a3968961"
+                                 targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwo4"
+                                 type="containerLink"/>
+                        </flow>
+                        <link id="q1bc09ff4-7dac-45f1-bbb0-8d41867751d7"
+                              targetId="ic88c317c-cb05-475b-ad6d-fd15f0fee0f4"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="contains">
+                                 <arg name="left">{$output.taskOutcome}</arg>
+                                 <arg name="right">Approve</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="x5cd4b68a-f362-4f41-a1db-d1bbc7779bfc"
+                              targetId="wb77ecd38-99ed-4bfe-8bd1-216f4b2d7824"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="contains">
+                                 <arg name="left">{$output.taskOutcome}</arg>
+                                 <arg name="right">Reject</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="lc64cbf2a-bbaa-4050-bf6b-683d42d76320"
+                              targetId="h0e1d24bc-765c-4e5b-b6b4-808576e5d14c"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="contains">
+                                 <arg name="left">{$output.taskOutcome}</arg>
+                                 <arg name="right">Return</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="k763e214a-3cb5-4f60-a18f-a7741669b3bc"
+                              targetId="q4bcfbcd6-5b6e-4dce-837d-52fbb17d7d1e"
+                              type="containerLink"/>
+                     </container>
+                     <link id="ibb1814af-3424-46d4-b0c4-15d80afa5a0c"
+                           targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwlr"
+                           type="containerLink"/>
+                  </flow>
+                  <flow id="ea53f04cf-353e-4f60-ae11-7cc10c22b749">
+                     <link id="s67a7ffdc-12a3-43ed-b59c-1ff3a004af70"
+                           targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwlr"
+                           type="containerLink"/>
+                  </flow>
+                  <flow id="y9d98edec-4a8d-4033-be7c-f80a7866cb7e">
+                     <humanTask id="a14eoJJO5IFWflHEVCJs0gY4-lozcsa83">
+                        <title>3Step_EditUser</title>
+                        <subflowGUID>hU1xfnsrNWibu4Aa6U6RAg</subflowGUID>
+                        <subflowPath>3Step_EditUser</subflowPath>
+                        <peopleActivityName>3Step_EditUser</peopleActivityName>
+                        <asset>
+                           <GUID>hU1xfnsrNWibu4Aa6U6RAg</GUID>
+                           <taskName>3Step_EditUser</taskName>
+                        </asset>
+                        <input>
+                           <field name="AssetName" source="constant"/>
+                        </input>
+                        <outputDef>
+                           <field name="taskOutcome" type="string"/>
+                        </outputDef>
+                        <config>
+                           <disableOutcomeLinksGeneration>true</disableOutcomeLinksGeneration>
+                        </config>
+                        <link id="wa79df3d9-df55-4d90-bc32-7a37840854d4"
+                              targetId="a14eoJJO5IFWflHEVCJs0gY4-loeg3wbn"/>
+                     </humanTask>
+                     <container id="a14eoJJO5IFWflHEVCJs0gY4-loeg3wbn" type="exclusive">
+                        <title>taskOutcome</title>
+                        <flow id="za1e7344e-8898-4c13-808c-5652815fd357">
+                           <link id="md8ccbecf-a5b4-40c6-973f-6230a37f1a18"
+                                 targetId="a14eoJJO5IFWflHEVCJs0gY4-loeg3wbn"
+                                 type="containerLink"/>
+                        </flow>
+                        <flow id="ya035f1ec-7a63-4e4c-9dd3-228b658608de">
+                           <jumpTo id="a14eoJJO5IFWflHEVCJs0gY4-loeg3wfh">
+                              <link id="yb2cfbf36-807b-453e-8534-993948b50926"
+                                    targetId="a14eoJJO5IFWflHEVCJs0gY4-lozcsa1k"/>
+                           </jumpTo>
+                        </flow>
+                        <flow id="m017fac47-de35-47d2-aa45-c5feef712d79">
+                           <link id="pa89ca21e-0c0b-46ed-b80a-8a8e6dcb310e"
+                                 targetId="a14eoJJO5IFWflHEVCJs0gY4-loeg3wbn"
+                                 type="containerLink"/>
+                        </flow>
+                        <link id="a049ebf33-dfcf-4f04-8fee-83503e491128"
+                              targetId="za1e7344e-8898-4c13-808c-5652815fd357"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="contains">
+                                 <arg name="left">{$output.taskOutcome}</arg>
+                                 <arg name="right">Discard</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="tb9ccdef7-c6a2-4e12-9f2a-63826627d5e1"
+                              targetId="ya035f1ec-7a63-4e4c-9dd3-228b658608de"
+                              type="containerLink">
+                           <condition source="formula">
+                              <function name="contains">
+                                 <arg name="left">{$output.taskOutcome}</arg>
+                                 <arg name="right">Resubmit</arg>
+                              </function>
+                           </condition>
+                        </link>
+                        <link id="r73bbfb56-0ebb-4dcd-bf23-f7878f29444c"
+                              targetId="m017fac47-de35-47d2-aa45-c5feef712d79"
+                              type="containerLink"/>
+                     </container>
+                     <link id="j647a38e2-1728-4213-9165-a2be35c34616"
+                           targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwlr"
+                           type="containerLink"/>
+                  </flow>
+                  <flow id="q1aa5cfa3-aafd-4a82-ace9-ed0369de7de6">
+                     <link id="b2568b423-ffc4-4974-a9c2-980e20218d10"
+                           targetId="a14eoJJO5IFWflHEVCJs0gY4-locslwlr"
+                           type="containerLink"/>
+                  </flow>
+                  <link id="x14d37594-5be9-41ef-9db3-d76061e76cea"
+                        targetId="l1643a6cc-008d-49ad-87a6-6f4287389af0"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="contains">
+                           <arg name="left">{$output.taskOutcome}</arg>
+                           <arg name="right">Approve</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="w799c7128-0d3a-4aa7-972a-565391c9544d"
+                        targetId="ea53f04cf-353e-4f60-ae11-7cc10c22b749"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="contains">
+                           <arg name="left">{$output.taskOutcome}</arg>
+                           <arg name="right">Reject</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="qfd154921-7421-475c-aac1-fd4181184e0b"
+                        targetId="y9d98edec-4a8d-4033-be7c-f80a7866cb7e"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="contains">
+                           <arg name="left">{$output.taskOutcome}</arg>
+                           <arg name="right">Return</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="x8d1cf116-ea6b-42ea-8d61-94f3a1eab4a5"
+                        targetId="q1aa5cfa3-aafd-4a82-ace9-ed0369de7de6"
+                        type="containerLink"/>
+                  <link id="z0ffc0523-6dc3-4350-9e24-4304811d9180"
+                        targetId="a14eoJJO5IFWflHEVCJs0gY4-c"/>
+               </container>
+               <end id="a14eoJJO5IFWflHEVCJs0gY4-c">
+                  <title>End</title>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>4eoJJO5IFWflHEVCJs0gY4</types1:GUID>
+      <types1:DisplayName>MultiStep_Workflow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.335Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

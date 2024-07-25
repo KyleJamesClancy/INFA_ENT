@@ -1,0 +1,113 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>2RtFgpKi9zhFtyb-gt-4852146-2024-02-05T15:05:33.858Z::svc.xml</types1:EntryId>
+      <types1:Name>Store</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-02-05T15:05:34Z</types1:CreationDate>
+      <types1:ModifiedBy>kclancy_ENT_Donald_tspod_SO</types1:ModifiedBy>
+      <types1:ModificationDate>2024-02-05T15:10:01Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="Store"
+                            label=""
+                            name="Store"
+                            uuid="14b36e72-f570-43f3-9a28-4c5602b8623d">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="Host Name"
+                                    label="hostName"
+                                    masked="false"
+                                    name="hostName"
+                                    required="false"
+                                    testWith="petstore.swagger.io"
+                                    type="string"/>
+               <connectionAttribute description="API Key"
+                                    label="api_key"
+                                    masked="false"
+                                    name="api_key"
+                                    required="false"
+                                    testWith="special-key"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category="store"
+                       failOnError="true"
+                       forSearch="false"
+                       label="getOrderByID"
+                       maxRedirects="100"
+                       name="getOrderByID"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Find purchase order by ID. For valid response try integer IDs with value &gt;= 1 and &lt;= 10. Other values will generated exceptions</description>
+                  <input>
+                     <parameter description="ID of pet that needs to be fetched"
+                                label="orderIdPathParam"
+                                name="orderIdPathParam"
+                                required="false"
+                                testWith="1257"
+                                type="int"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://{$hostName}/v2/store/order/{$orderIdPathParam}"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="Order" property="Order" type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">$po:$any</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Order">
+                  <description/>
+                  <detail>
+                     <field name="petID" nullable="true" required="false" type="int"/>
+                     <field name="quantity" nullable="true" required="false" type="int"/>
+                     <field name="id" nullable="true" required="false" type="int"/>
+                     <field name="shipDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="complete" nullable="true" required="false" type="boolean"/>
+                     <field name="status" nullable="true" required="false" type="picklist">
+                        <options>
+                           <option name="values">[{"label":"placed","value":"placed"},{"label":"approved","value":"approved"},{"label":"delivered","value":"delivered"}]</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>80Kz4Dz0S0mgN73jJ3FMmC</types1:GUID>
+      <types1:DisplayName>Store</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:25.81Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "iyVDgZKuTMrg3fpmPrjHA3",
+    "name" : "AddressType",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "4U6S6fPAreFRqXp-gt-567511-2024-07-16T17:47:13.887Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [addressType complex type] located in the [PurchaseOrder.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.429Z",
+  "objectRefs" : [ ]
+}

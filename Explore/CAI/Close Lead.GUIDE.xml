@@ -1,0 +1,463 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>lwDxomUhGdwOLIF-gt-4854424-2024-02-05T15:56:23.183Z::gt.xml</types1:EntryId>
+      <types1:Name>Close_Lead</types1:Name>
+      <types1:MimeType>application/xml+screenflow</types1:MimeType>
+      <types1:Description>Should you close this lead?</types1:Description>
+      <types1:AppliesTo>Salesforce:Lead</types1:AppliesTo>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-02-05T15:56:23Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <avosScreenflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                         xmlns:list="urn:activevos:spi:list:functions"
+                         allowRestart="true"
+                         displayName="Close Lead"
+                         doneOnEndStep="false"
+                         name="Close_Lead"
+                         runAsUser="$current">
+            <description>Should you close this lead?</description>
+            <appliesTo>Salesforce:Lead</appliesTo>
+            <tags/>
+            <generator>Informatica Screenflow Designer 9</generator>
+            <possibleOutcomes>
+               <outcome id="outcome_1529922535189">Closed - Not Converted</outcome>
+               <outcome id="outcome_1529922535357">Closed - Invalid</outcome>
+               <outcome id="outcome_1529922535497">Closed - Unreachable</outcome>
+               <outcome id="outcome_1529922535624">Invalid</outcome>
+               <outcome id="outcome_1529922535724">Closed - Not Converted (voice message)</outcome>
+               <outcome id="outcome_1529922535932">Closed - Not Converted (email message)</outcome>
+            </possibleOutcomes>
+            <runOn target="desktop"/>
+            <notes/>
+            <deployment/>
+            <sendFeedback>
+               <emailTo/>
+            </sendFeedback>
+            <flow>
+               <startScreen id="jd300kk3">
+                  <title>Start</title>
+                  <body contentType="text/html"/>
+                  <actions>
+                     <action alt="null" id="jd300kk3_jiu4ce5b" targetScreen="jiu4ce5b">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="true"/>
+               </startScreen>
+               <screen id="jiu4ce5b">
+                  <title>Did you speak directly with this prospect?</title>
+                  <body contentType="text/html">&lt;p&gt;&lt;strong&gt;Verify&lt;img style="width: 100px; height: 83px; float: right;" title="directive.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/directive.png" alt="directive.png"&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote class="webkit-indent-blockquote" style="margin: 0pt 0pt 0pt 40px; padding: 0px;"&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;You have spoken directly with&amp;nbsp;&lt;input style="-moz-appearance: none; background-color: lightgrey; border: none;" name="Name" readonly="readonly" type="text" value="Full Name"&gt;&amp;nbsp;and there is currently not a need for our product&lt;/div&gt;
+&lt;/blockquote&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="jiu4ce5b_jiu4cevz" targetScreen="jiu4cevz">
+                        <text>Yes</text>
+                     </action>
+                     <action alt="null" id="jiu4ce5b_jiu4ce5s" targetScreen="jiu4ce5s">
+                        <text>No</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="false">
+                     <screenDataItem name="Name" readonly="true" required="false" type="string">
+                        <options>
+                           <option name="length">121</option>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                  </screenData>
+               </screen>
+               <screen id="jiu4ce5s">
+                  <title>Did the prospect respond to voice or email messages?</title>
+                  <body contentType="text/html">&lt;p&gt;&lt;strong&gt;Verif&lt;img style="width: 100px; height: 83px; float: right;" title="directive.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/directive.png" alt="directive.png"&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote class="webkit-indent-blockquote" style="margin: 0pt 0pt 0pt 40px; padding: 0px;"&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;The prospect has responded to our offering by either voice or email -&amp;nbsp;and there is currently no need for our product&lt;/div&gt;
+&lt;/blockquote&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="jiu4ce5s_jiu4ceqq" targetScreen="jiu4ceqq">
+                        <text>Yes</text>
+                     </action>
+                     <action alt="null" id="jiu4ce5s_jiu4ce6b" targetScreen="jiu4ce6b">
+                        <text>No</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="jiu4ce6b">
+                  <title>Is the contact information Invalid or Incorrect?</title>
+                  <body contentType="text/html">&lt;p&gt;&lt;strong&gt;Did any of the following occur?&lt;img style="width: 100px; height: 83px; float: right;" title="directive.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/directive.png" alt="directive.png"&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Email bounced-back as undeliverable&lt;/li&gt;
+&lt;li&gt;Telephone number for this lead is no longer in service&lt;/li&gt;
+&lt;li&gt;Voice message at the phone number listed was for different person or company&lt;/li&gt;
+&lt;/ul&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="jiu4ce6b_jiu4cedq" targetScreen="jiu4cedq">
+                        <text>Incorrect or Invalid Contact Info</text>
+                     </action>
+                     <action alt="null" id="jiu4ce6b_jiu4ce76" targetScreen="jiu4ce76">
+                        <text>Contact Info is OK</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="jiu4cedq">
+                  <title>What would you like to do?</title>
+                  <body contentType="text/html">&lt;p&gt;&lt;strong&gt;To Do&lt;img style="width: 100px; height: 83px; float: right;" title="directive.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/directive.png" alt="directive.png"&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;ol&gt;
+&lt;li&gt;Check the Lead Source&lt;/li&gt;
+&lt;li&gt;Bounce it back to the Lead Creator (or Marketing) to update&lt;/li&gt;
+&amp;nbsp; &amp;nbsp; - or -&lt;/ol&gt;
+&lt;/ol&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;ol&gt;&amp;nbsp; &amp;nbsp; Close the Lead&lt;/ol&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="jiu4cedq_jiu4ceep" targetScreen="jiu4ceep">
+                        <text>Request Contact Info Be Fixed</text>
+                     </action>
+                     <action alt="null" id="jiu4cedq_jiu4ceni" targetScreen="jiu4ceni">
+                        <text>Close the Lead</text>
+                     </action>
+                  </actions>
+               </screen>
+               <screen id="jiu4ce76">
+                  <title>Did you make at least 2 attempts to contact the prospect?</title>
+                  <body contentType="text/html">&lt;p&gt;&lt;strong&gt;Reminder&lt;img style="width: 100px; height: 83px; float: right;" title="directive.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/directive.png" alt="directive.png"&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;Department policy requires that a minimum of two (2) attempts to contact prospects be made by&amp;nbsp;&lt;em&gt;BOTH&lt;/em&gt;&amp;nbsp;&lt;span style="text-decoration: underline;"&gt;phone&lt;/span&gt;&amp;nbsp;and&amp;nbsp;&lt;span style="text-decoration: underline;"&gt;email&lt;/span&gt;&lt;/blockquote&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="jiu4ce76_jiu4ce8k" targetScreen="jiu4ce8k">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </screen>
+               <service id="jiu4cexk">
+                  <title>Update Status to Closed - Not Converted</title>
+                  <serviceName>Salesforce:sfUpdateFieldService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter id="jizkhr1b" name="ObjectId" source="field" updatable="false">Id</parameter>
+                     <parameter id="jizkhr1c"
+                                name="ObjectType"
+                                source="constant"
+                                updatable="false">Salesforce:Lead</parameter>
+                     <parameter id="jizkhr1d"
+                                name="Field Name"
+                                source="constant"
+                                updatable="false">Status</parameter>
+                     <parameter id="jizkhr1e"
+                                name="Field Value"
+                                source="constant"
+                                updatable="false">Closed - Not Converted</parameter>
+                  </serviceInput>
+                  <actions>
+                     <action alt="null" id="jiu4cexk_jiu4cey8" targetScreen="jiu4cey8">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </service>
+               <service id="jiu4ceu9">
+                  <title>Update Status to Closed - Not Converted</title>
+                  <serviceName>Salesforce:sfUpdateFieldService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter id="jizkhquq" name="ObjectId" source="field" updatable="false">Id</parameter>
+                     <parameter id="jizkhqur"
+                                name="ObjectType"
+                                source="constant"
+                                updatable="false">Salesforce:Lead</parameter>
+                     <parameter id="jizkhqus"
+                                name="Field Name"
+                                source="constant"
+                                updatable="false">Status</parameter>
+                     <parameter id="jizkhqut"
+                                name="Field Value"
+                                source="constant"
+                                updatable="false">Closed - Not Converted</parameter>
+                  </serviceInput>
+                  <actions>
+                     <action alt="null" id="jiu4ceu9_jiu4cevn" targetScreen="jiu4cevn">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </service>
+               <service id="jiu4ceep">
+                  <title>Send the email</title>
+                  <serviceName>Salesforce:sfSendFreeFormEmailService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter id="jiu4b0of" name="Subject" source="screen" updatable="false">screen.Subject</parameter>
+                     <parameter id="jiu4b0og" name="Body" source="screen" updatable="false">screen.Body</parameter>
+                     <parameter id="jiu4b0od"
+                                name="Recipient Object"
+                                source="field"
+                                updatable="false">input.Current User</parameter>
+                     <parameter id="jiu4b0oe"
+                                name="Recipient Address"
+                                source="screen"
+                                updatable="false">screen.Recipient Address</parameter>
+                  </serviceInput>
+                  <screen id="jiu4ceep-servicescreen">
+                     <title>Send the email</title>
+                     <body contentType="text/html">&lt;table cellpadding="5"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;To:&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;&lt;input title="Edit a field to change the field properties." name="screen.Recipient Address" type="text" value="Recipient Address"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Subject:&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;&lt;input title="Edit a field to change the field properties." name="screen.Subject" type="text" value="Subject*"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Body:&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;&lt;input title="Edit a field to change the field properties." name="screen.Body" type="text" value="Body*"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</body>
+                     <actionPrompt/>
+                     <actions/>
+                     <screenData skipIfRequiredFilled="false">
+                        <screenDataItem name="screen.Recipient Address"
+                                        readonly="false"
+                                        required="false"
+                                        type="string">
+                           <options>
+                              <option name="required">false</option>
+                           </options>
+                        </screenDataItem>
+                        <screenDataItem name="screen.Subject"
+                                        readonly="false"
+                                        required="true"
+                                        type="string">
+                           <options>
+                              <option name="required">true</option>
+                           </options>
+                        </screenDataItem>
+                        <screenDataItem name="screen.Body"
+                                        readonly="false"
+                                        required="true"
+                                        type="richtextarea">
+                           <options>
+                              <option name="length">32000</option>
+                              <option name="text_height">12</option>
+                              <option name="text_width">100</option>
+                              <option name="required">true</option>
+                           </options>
+                        </screenDataItem>
+                     </screenData>
+                  </screen>
+                  <actions>
+                     <action alt="null" id="jiu4ceep_jiu4cejg" targetScreen="jiu4cejg">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </service>
+               <service id="jiu4cejg">
+                  <title>Update status to "Invalid"</title>
+                  <serviceName>Salesforce:sfUpdateFieldService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter id="jizkhqo5" name="ObjectId" source="field" updatable="false">Id</parameter>
+                     <parameter id="jizkhqo6"
+                                name="ObjectType"
+                                source="constant"
+                                updatable="false">Salesforce:Lead</parameter>
+                     <parameter id="jizkhqo7"
+                                name="Field Name"
+                                source="constant"
+                                updatable="false">Status</parameter>
+                     <parameter id="jizkhqo8"
+                                name="Field Value"
+                                source="constant"
+                                updatable="false">Invalid</parameter>
+                  </serviceInput>
+                  <actions>
+                     <action alt="null" id="jiu4cejg_jiu4ceme" targetScreen="jiu4ceme">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </service>
+               <service id="jiu4ceni">
+                  <title>Update Status to Closed - Invalid</title>
+                  <serviceName>Salesforce:sfUpdateFieldService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter id="jizkhqdw" name="ObjectId" source="field" updatable="false">Id</parameter>
+                     <parameter id="jizkhqdx"
+                                name="ObjectType"
+                                source="constant"
+                                updatable="false">Salesforce:Lead</parameter>
+                     <parameter id="jizkhqdy"
+                                name="Field Name"
+                                source="constant"
+                                updatable="false">Status</parameter>
+                     <parameter id="jizkhqdz"
+                                name="Field Value"
+                                source="constant"
+                                updatable="false">Invalid</parameter>
+                  </serviceInput>
+                  <actions>
+                     <action alt="null" id="jiu4ceni_jiu4ceq1" targetScreen="jiu4ceq1">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </service>
+               <service id="jiu4ce8k">
+                  <title>Update Status to Closed - Unreachable</title>
+                  <serviceName>Salesforce:sfUpdateFieldService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter id="jizkbhk9" name="ObjectId" source="field" updatable="false">Id</parameter>
+                     <parameter id="jizkbhka"
+                                name="ObjectType"
+                                source="constant"
+                                updatable="false">Salesforce:Lead</parameter>
+                     <parameter id="jizkbhkb"
+                                name="Field Name"
+                                source="constant"
+                                updatable="false">Status</parameter>
+                     <parameter id="jizkbhkc"
+                                name="Field Value"
+                                source="constant"
+                                updatable="false">Closed - Unreachable</parameter>
+                  </serviceInput>
+                  <actions>
+                     <action alt="null" id="jiu4ce8k_jiu4cecs" targetScreen="jiu4cecs">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </service>
+               <endScreen id="jiu4cey8" outcomeId="outcome_1529922535189">
+                  <title>Lead status is now Closed - Not Converted</title>
+                  <body contentType="text/html">&lt;p&gt;The status of this lead has been updated to "Closed - Not Converted&lt;img style="width: 100px; height: 83px; float: right;" title="closed.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/closed.png" alt="closed.png"&gt;&lt;/p&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="jiu4cevn" outcomeId="outcome_1529922535189">
+                  <title>Lead status is now Closed - Not Converted</title>
+                  <body contentType="text/html">&lt;p&gt;The status of this lead has been updated to "Closed - Not Converted&lt;img style="width: 100px; height: 83px; float: right;" title="closed.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/closed.png" alt="closed.png"&gt;&lt;/p&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="jiu4ceme" outcomeId="outcome_1529922535624">
+                  <title>Lead status set to Invalid</title>
+                  <body contentType="text/html">&lt;p&gt;The status of this lead has been updated to "Invalid&lt;img style="width: 100px; height: 83px; float: right;" title="email_template.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/email_template.png" alt="email_template.png"&gt;&lt;br&gt;&lt;br&gt;An email was sent requesting contact information be updated&lt;/p&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="jiu4ceq1" outcomeId="outcome_1529922535357">
+                  <title>Lead status is now Closed - Invalid</title>
+                  <body contentType="text/html">&lt;p&gt;The status of this lead has been updated to "Closed - Invalid&lt;img style="width: 100px; height: 83px; float: right;" title="closed.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/closed.png" alt="closed.png"&gt;&lt;/p&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <endScreen id="jiu4cecs" outcomeId="outcome_1529922535497">
+                  <title>Lead status is now Closed - Unreachable</title>
+                  <body contentType="text/html">&lt;p&gt;The status of this lead has been updated to "Closed - Unreachable&lt;img style="width: 100px; height: 83px; float: right;" title="closed.png" src="project:/com.activevos.cumulus.cloud.extend.playbook.resources/icons/closed.png" alt="closed.png"&gt;&lt;/p&gt;</body>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <empty gatewayType="exclusive" id="jjdstew2">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="jjdstew0">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="jjdstevy">
+                  <actions/>
+               </empty>
+               <empty gatewayType="exclusive" id="jjdstevs">
+                  <actions/>
+               </empty>
+               <create id="jiu4cevz">
+                  <title>Log a call for prospect contact</title>
+                  <entityName>Salesforce:Task</entityName>
+                  <createInput>
+                     <parameter id="jizkcs8f" name="WhoId" source="field" updatable="false">Id</parameter>
+                     <parameter id="jizkcs8g" name="Subject" source="constant" updatable="true">Call</parameter>
+                     <parameter id="jizkcs8h" name="Status" source="constant" updatable="true">Completed</parameter>
+                     <parameter id="jizkcs8i"
+                                name="Priority"
+                                source="constant"
+                                updatable="true">Normal</parameter>
+                  </createInput>
+                  <actions>
+                     <action alt="null" id="jiu4cevz_jiu4cexk" targetScreen="jiu4cexk">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+               <create id="jiu4ceqq">
+                  <title>Log a call customer responded to voice mail</title>
+                  <entityName>Salesforce:Task</entityName>
+                  <createInput>
+                     <parameter id="jizkcs8p" name="WhoId" source="field" updatable="false">Id</parameter>
+                     <parameter id="jizkcs8q" name="Subject" source="constant" updatable="true">Call</parameter>
+                     <parameter id="jizkcs8r" name="Status" source="constant" updatable="true">Completed</parameter>
+                     <parameter id="jizkcs8s"
+                                name="Priority"
+                                source="constant"
+                                updatable="true">Normal</parameter>
+                     <parameter id="jizkcs8t"
+                                name="Description"
+                                source="screen"
+                                updatable="true">screen.Description</parameter>
+                  </createInput>
+                  <screen id="jiu4ceqq-servicescreen">
+                     <title>Log a call customer responded to voice mail</title>
+                     <body contentType="text/html">&lt;p&gt;Call description:&lt;/p&gt;
+&lt;p&gt;&lt;input title="Edit a field to change the field properties." name="screen.Description" type="text" value="Description"&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;</body>
+                     <actionPrompt/>
+                     <actions/>
+                     <screenData skipIfRequiredFilled="false">
+                        <screenDataItem name="screen.Description"
+                                        readonly="false"
+                                        required="false"
+                                        type="textarea">
+                           <options>
+                              <option hide="true" name="length">32000</option>
+                              <option name="text_width">100</option>
+                              <option name="text_height">5</option>
+                              <option name="required">false</option>
+                           </options>
+                        </screenDataItem>
+                     </screenData>
+                  </screen>
+                  <actions>
+                     <action alt="null" id="jiu4ceqq_jiu4ceu9" targetScreen="jiu4ceu9">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </create>
+            </flow>
+         </avosScreenflow>
+      </types1:Entry>
+      <types1:GUID>a45jUoHg215jAj1v4kSBuf</types1:GUID>
+      <types1:DisplayName>Close Lead</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:25.943Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

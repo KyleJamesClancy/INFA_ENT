@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "3rbKwlBKmYSkIsuJN3gX68",
+    "name" : "Order Management",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-07-25T15:43:27.419Z",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,65 @@
+{
+  "objectInfo" : {
+    "id" : "59uERf7L2m7ilBBgJPoeKT",
+    "name" : "Order Management",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "7BwLjBeE1KoJBUh-gt-7026169-2023-08-31T17:10:23.95Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Use multiple services to get order status, order ID, item price, and order price based on customer details.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "INVALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.428Z",
+  "objectRefs" : [ {
+    "id" : "2XShjHiNwPYh8bLsosp62r",
+    "name" : "TC-Get-Margin-Detail",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Pci9zhFtybduaa-gt-7009374-2023-08-31T17:10:23.671Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connection for the Get margin Detail SVC",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI/Order Management"
+  }, {
+    "id" : "4VqN4B5Mx3Ui7WXIGs7JE8",
+    "name" : "Get-Inventory-Detail-TC",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Mmaaa-gt-7009364-2023-08-31T17:10:23.626Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI/Order Management"
+  } ]
+}

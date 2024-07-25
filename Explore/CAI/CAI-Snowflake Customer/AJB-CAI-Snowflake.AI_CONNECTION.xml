@@ -1,0 +1,62 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>wFIRi92qBbbeJOS-gt-1403807-2024-06-12T22:05:21.367Z::conn.xml</types1:EntryId>
+      <types1:Name>AJB-CAI-Snowflake</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:SAG_SDE_Cloud</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-06-12T22:05:21Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="AJB-CAI-Snowflake"
+                     label="AJB-CAI-Snowflake"
+                     name="AJB-CAI-Snowflake">
+            <description/>
+            <tags>.agent:SAG_SDE_Cloud</tags>
+            <agent>SAG_SDE_Cloud</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="JDBC Connection URL"
+                          value="jdbc:snowflake://informaticapartner.snowflakecomputing.com/?warehouse=DEMO_WH&amp;db=AJB_DEMODB&amp;schema=PUBLIC"/>
+               <attribute encrypted="false"
+                          name="JDBC Jar Directory"
+                          value="/opt/iics/apps/process-engine/ext"/>
+               <attribute encrypted="false" name="JDBC Driver Class Name" value=""/>
+               <attribute encrypted="false" name="Schema" value="PUBLIC"/>
+               <attribute encrypted="false" name="Username" value="CDP_CONNECTION"/>
+               <attribute encrypted="true" name="Password" value=""/>
+               <attribute encrypted="false" name="Object Filter" value=""/>
+               <attribute encrypted="false" name="TimeZone" value="Default"/>
+               <attribute encrypted="false" name="$read-Isolation Level" value="None"/>
+               <attribute encrypted="false"
+                          name="$read-Override Isolation Level"
+                          value="false"/>
+               <attribute encrypted="false" name="$write-Number of retries" value="5"/>
+               <attribute encrypted="false" name="$write-Retry wait period" value="3"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="ICS"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="true"
+                           supportsOData="true"
+                           supportsPublishSkipMetadataRefresh="true"
+                           type="GenericJDBCAdapter"
+                           uuid="33ec8fc7-dc6d-4d2e-9f6f-a950669a62d1">
+               <description>JDBC  Generic Cloud Adapter</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>9GQ2aVG7jFEiK1b9dFpzsN</types1:GUID>
+      <types1:DisplayName>AJB-CAI-Snowflake</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.17Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

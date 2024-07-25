@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "1upylR2QgcvgfeAeTLQD6U",
+    "name" : "CAI-Snowflake",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "g9hOznKKvvNtLSV-gt-7008881-2023-08-31T16:58:59.098Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.426Z",
+  "objectRefs" : [ ]
+}

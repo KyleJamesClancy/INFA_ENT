@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "29fULrEPhFxc2t4K5URAaC",
+    "name" : "kakfa",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HAHufWC64Ky2uI5-gt-689432-2024-02-12T16:57:26.542Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.427Z",
+  "objectRefs" : [ ]
+}

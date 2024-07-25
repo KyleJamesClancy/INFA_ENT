@@ -1,0 +1,50 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>1YxQ2Tp5OjG4abc-gt-567503-2024-07-16T17:47:13.847Z::po.xml</types1:EntryId>
+      <types1:Name>ProductsType</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>kclancy_ENT_Donald_tspod_SO</types1:CreatedBy>
+      <types1:CreationDate>2024-07-16T17:47:14Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                        isByCopy="true"
+                        name="ProductsType">
+            <description>This object was generated from [productsType complex type] located in the [PurchaseOrder.json.xsd] source XML schema.</description>
+            <detail>
+               <field label="unitPrice"
+                      name="unitPrice"
+                      nullable="true"
+                      type="double"/>
+               <field label="quantity" name="quantity" nullable="true" type="int"/>
+               <field label="productID"
+                      name="productID"
+                      nullable="true"
+                      type="string"/>
+               <field label="totalPrice"
+                      name="totalPrice"
+                      nullable="true"
+                      type="double"/>
+               <field label="productName"
+                      name="productName"
+                      nullable="true"
+                      type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>5cBASJA7JT0dsrQK8ggwKB</types1:GUID>
+      <types1:DisplayName>ProductsType</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-07-25T15:43:26.01Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

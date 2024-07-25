@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "80Kz4Dz0S0mgN73jJ3FMmC",
+    "name" : "Store",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "2RtFgpKi9zhFtyb-gt-4852146-2024-02-05T15:05:33.858Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.418Z",
+  "objectRefs" : [ ]
+}

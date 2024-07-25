@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "4VqN4B5Mx3Ui7WXIGs7JE8",
+    "name" : "Get-Inventory-Detail-TC",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Mmaaa-gt-7009364-2023-08-31T17:10:23.626Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.424Z",
+  "objectRefs" : [ {
+    "id" : "8CAoqQez8E8bsgp4JIroyO",
+    "name" : "Get Inventory Detail",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "rhNzUzeA8rJ4pbg-gt-7009346-2023-08-31T17:10:23.285Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connector to interact with InventoryService",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI/Order Management"
+  } ]
+}

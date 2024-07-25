@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "9Q2kHKgMSZVe4r3IixBR6D",
+    "name" : "3Step_FinalApprover",
+    "type" : "HUMAN_TASK",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "AUxEKSabbeJOSM8-gt-127618-2024-05-29T01:17:51.433Z::ht.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Three Step Final Approve HT Desc",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.424Z",
+  "objectRefs" : [ ]
+}

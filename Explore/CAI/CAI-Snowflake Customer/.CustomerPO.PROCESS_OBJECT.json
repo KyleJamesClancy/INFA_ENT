@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "9YpatgJ0BQ1duG4NOReBgy",
+    "name" : "CustomerPO",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lu6zqzm5Y6tMFyg-gt-1403839-2024-06-12T22:05:21.82Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-07-25T15:43:27.431Z",
+  "objectRefs" : [ {
+    "id" : "21kD2blIHVFezm8nqXwxgz",
+    "name" : "AddressPO",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "iaa-gt-1403817-2024-06-12T22:05:21.41Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/Explore/CAI/CAI-Snowflake Customer"
+  } ]
+}
