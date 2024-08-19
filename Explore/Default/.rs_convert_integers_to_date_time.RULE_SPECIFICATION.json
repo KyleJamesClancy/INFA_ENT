@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "9MbswhyxxkDjYsBCsJXEeL",
+    "name" : "rs_convert_integers_to_date_time",
+    "type" : "RULE_SPECIFICATION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "9MbswhyxxkDjYsBCsJXEeL"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Combines values from integer input fields to create a date/time value. The rule specification can read year, month, day, hour, minute, second, and nanosecond values. Minimum input values are year, month, and day.\n\nTags: Conformity/Validity,Consistency",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-08-19T19:27:07.164Z",
+  "objectRefs" : [ ]
+}
