@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "7Cpp8DygFybbO12FDi6Csv",
+    "name" : "prof_mapplet",
+    "type" : "PROFILE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "b3fbb186-00af-47b4-9c61-b0d6b936888b"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "json",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-08-19T19:35:26.640Z",
+  "objectRefs" : [ {
+    "id" : "fAS6eCCH2AdkxRlJXGHQiF",
+    "name" : "mpplt_Profile",
+    "type" : "DMAPPLET",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010T5K4000000000002G"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CAI/3 step workflow"
+  } ]
+}

@@ -1,0 +1,65 @@
+{
+  "objectInfo" : {
+    "id" : "1P1meijxZzmhOVlHZom4sE",
+    "name" : "Customer_Scorecard",
+    "type" : "PROFILE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "46853dd5-35a4-47db-b89c-a9374705a712"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "json",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-08-19T19:35:26.639Z",
+  "objectRefs" : [ {
+    "id" : "52rUysXhf8GlmJfNlzHKsm",
+    "name" : "rs_is_null_status",
+    "type" : "RULE_SPECIFICATION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "52rUysXhf8GlmJfNlzHKsm"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Checks for null status.",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default"
+  }, {
+    "id" : "0506hcfGNYFivrfmS6a3it",
+    "name" : "tspod_Snowflake_idmc_connection",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010T5K0B000000000008"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "tspod_Snowflake_idmc_connection",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

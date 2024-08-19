@@ -1,0 +1,108 @@
+{
+  "objectInfo" : {
+    "id" : "bfDaMH28scVhL3g4l4x5Ck",
+    "name" : "CDQ - Exception flow",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010T5K0Z00000000001O"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-08-19T19:35:26.636Z",
+  "objectRefs" : [ {
+    "id" : "1hHudN0HDIAh8HfdMJ2rSe",
+    "name" : "idmc04-gdts-primary.infacloud.eu",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010T5K25000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "33a23DC9ZvYjQYepNX5VCK",
+    "name" : "M_Cleanse_Validate_EU_Customers",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010T5K1700000000001U"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Mapping will cleanse and standarise customer records.\nThe cleansed records are then validated and split into good and bad records.\n\nBad records are records that failed a DQ check and need manual remediation.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CDQ - Assets/@DI-Mappings"
+  }, {
+    "id" : "0uX8oVHfIHudYAemiI80m8",
+    "name" : "CDQ_DEMO",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010T5K0B000000000024"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "6GRxFRdH8bylRS9tz3LNgX",
+    "name" : "tspod_Google_BigQuery_idmc_connection",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010T5K0B000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}
